@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Arquitecto del Trabajo con IA · INEMA.CLUB PRO</title>
+<meta content="Curso para gerentes y profesionales de distintas áreas: rediseña un proceso real de tu empresa para que las personas lo dirijan y los agentes de IA lo ejecuten, con especificaciones, calidad y permisos por escrito." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0E0D14;--bg2:#15131d;--panel:#1a1824;--ink:#ECE6D9;--ink-soft:#C7C2D0;--muted:#948DA6;--faint:#6C6580;
+    --line:#2A2637;--line2:#37324a;--accent:#7CE0C6;--accent-ink:#0E0D14;--warm:#F2B45C;
+    --serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(24px,5vw,60px)}
+  header.top{padding:26px 0}
+  header.top .wrap{display:flex;align-items:center;gap:10px}
+  header.top .mark{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--accent);text-decoration:none;font-weight:700}
+  header.top .pro{background:var(--accent);color:var(--accent-ink);border-radius:4px;padding:2px 6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-decoration:none;margin-left:8px}
+  header.top .course{color:var(--muted);font-size:12px;letter-spacing:.04em;border-left:1px solid var(--line2);padding-left:10px;margin-left:2px;font-family:var(--mono)}
+  .hero{position:relative;padding:10vh 0 9vh;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(55% 48% at 80% 20%,rgba(124,224,198,.14),transparent 60%),radial-gradient(90% 90% at 50% 40%,var(--bg2),var(--bg) 72%)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.02em;margin:0 0 22px;max-width:18ch}
+  h1 em{font-style:italic;color:var(--accent)}
+  .lead{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--ink-soft);max-width:46ch;margin:0 0 34px}
+  .cta{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:99px;padding:15px 26px;font-weight:700}
+  .cta:hover{opacity:.92}
+  .sub{color:var(--muted);font-size:13.5px;margin-top:14px;font-family:var(--mono)}
+  .herofig svg{width:100%;height:auto;display:block}
+
+  section{padding:8vh 0}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,36px);margin:0 0 28px}
+
+  .resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .resultado{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:22px 24px}
+  .resultado p{margin:0;font-size:15px;color:var(--ink-soft);line-height:1.55}
+  .resultado p b{color:var(--ink)}
+
+  .tese{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:var(--ink);max-width:52ch;margin:0}
+  .tese em{color:var(--accent);font-style:italic}
+  .numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:34px}
+  .num{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:22px 24px}
+  .num .big{font-family:var(--serif);font-size:44px;line-height:1;color:var(--accent);margin:0 0 8px}
+  .num p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .num p b{color:var(--ink-soft);font-weight:600}
+
+  .aulas{display:grid;gap:14px}
+  .au{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+  .au .num{font-family:var(--serif);font-size:26px;color:var(--accent);text-align:center;border:0;background:none;padding:0}
+  .au h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px}
+  .au p{margin:0;color:var(--muted);font-size:14px}
+  .au .meta{font-family:var(--mono);font-size:11px;color:var(--accent);white-space:nowrap;text-align:right}
+  .au:hover{border-color:var(--accent)}
+
+  .publico{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .publico .col{background:var(--panel);padding:22px 24px}
+  .publico .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+  .publico .col.sim .lbl{color:var(--accent)}
+  .publico .col.nao .lbl{color:var(--muted)}
+  .publico ul{margin:0;padding:0;list-style:none}
+  .publico li{position:relative;padding-left:20px;margin:0 0 10px;color:var(--ink-soft);font-size:14.5px;line-height:1.5}
+  .publico li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+
+  .fontes{color:var(--muted);font-size:13.5px;line-height:1.7;max-width:72ch}
+  .fontes a{color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--line);padding:6vh 0 8vh;color:var(--faint);text-align:center;font-family:var(--serif);font-style:italic}
+
+  @media(max-width:820px){ .hero .wrap{grid-template-columns:1fr} .herofig{max-width:320px} }
+  @media(max-width:720px){ .publico{grid-template-columns:1fr} .au{grid-template-columns:44px 1fr} .au .meta{grid-column:2;text-align:left} }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<link href="https://inematds.github.io/pffia/landing.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/pffia/en/landing.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/pffia/es/landing.html" hreflang="es" rel="alternate"/></head>
+<body><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../landing.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/landing.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./landing.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<header class="top"><div class="wrap">
+<a class="mark" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+<span class="course">Arquitecto del Trabajo con IA</span>
+</div></header>
+<section class="hero"><div class="wrap">
+<div>
+<p class="kicker">IA para tu trabajo · agentes y procesos</p>
+<h1>Rediseña el trabajo para <em>los humanos dirijan</em> y los agentes ejecuten</h1>
+<p class="lead">En 8 clases, tomarás un proceso real de tu empresa y terminarás con su rediseño: qué queda en manos de las personas, qué pasa a agentes de IA y la especificación de una página con calidad y permisos por escrito. Sin programar, sin videos, a tu ritmo.</p>
+<a class="cta" href="curso.html#trilha">empezar ahora →</a>
+<p class="sub">~20 a 25 min por clase · nada para descargar · funciona en el celular y en la computadora</p>
+</div>
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<ellipse cx="150" cy="212" fill="#000" opacity=".25" rx="110" ry="9"></ellipse>
+<rect fill="#1a1824" height="56" rx="6" stroke="#948DA6" stroke-width="2" width="240" x="30" y="150"></rect>
+<rect fill="#37324a" height="8" rx="3" width="240" x="30" y="150"></rect>
+<path d="M60 150 v56 M140 150 v56 M220 150 v56" stroke="#2A2637" stroke-width="2"></path>
+<circle cx="92" cy="140" fill="#221f2e" r="16" stroke="#948DA6" stroke-width="2"></circle>
+<path d="M78 140 a14 14 0 0 1 28 0" fill="none" stroke="#F2B45C" stroke-width="3"></path>
+<circle cx="180" cy="140" fill="#221f2e" r="16" stroke="#948DA6" stroke-width="2"></circle>
+<path d="M168 136 h24 M168 144 h24" stroke="#7CE0C6" stroke-width="3"></path>
+<rect fill="#221f2e" height="24" rx="3" stroke="#948DA6" stroke-width="2" width="26" x="235" y="126"></rect>
+<path d="M241 138 h14" stroke="#948DA6" stroke-width="2"></path>
+<rect fill="#221f2e" height="60" rx="22" stroke="#ECE6D9" stroke-width="2" width="44" x="128" y="40"></rect>
+<path d="M128 40 h44" stroke="#ECE6D9" stroke-width="3"></path>
+<rect fill="#F2B45C" height="46" rx="8" width="64" x="118" y="100"></rect>
+<path d="M150 112 v22" stroke="#0E0D14" stroke-width="2"></path>
+<path d="M100 118 h-30 l-8 -14" fill="none" stroke="#7CE0C6" stroke-width="2"></path>
+<path d="M200 118 h30 l8 -14" fill="none" stroke="#7CE0C6" stroke-width="2"></path>
+<circle cx="62" cy="104" fill="#7CE0C6" r="3"></circle><circle cx="238" cy="104" fill="#7CE0C6" r="3"></circle>
+</svg></div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">La tesis</p>
+<p class="tese">El verdadero enfoque para las empresas no es hacer páginas bonitas con IA. Es <em>rediseñar el trabajo</em> para que los humanos dirijan y los agentes ejecuten partes cada vez más grandes del proceso. Quien sepa hacer esto, con control, calidad y responsabilidad, será uno de los profesionales más valiosos de 2026 a 2028.</p>
+<div class="numeros">
+<div class="num"><p class="big">74%</p><p>de los líderes esperan que, en cuatro años, <b>casi la mitad de los procesos</b> haya sido rediseñada en torno a agentes de IA (Deloitte).</p></div>
+<div class="num"><p class="big">5%</p><p>consideran sus propios procesos <b>altamente preparados</b> hoy (Deloitte). Entre los dos números está la oportunidad.</p></div>
+<div class="num"><p class="big">21%</p><p>de las empresas dicen tener <b>gobernanza madura</b> para agentes de IA (Deloitte). La clase 7 trata sobre entrar en ese grupo.</p></div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Lo que sabrás hacer al terminar</p>
+<h2>Resultado, no teoría</h2>
+<div class="resultados">
+<div class="resultado"><p><b>Mapear un proceso real</b> en seis eslabones (entrada, decisión, acción, verificación, excepción, resultado) y marcar qué se puede delegar a agentes.</p></div>
+<div class="resultado"><p><b>Delegar objetivos, no tareas</b>: escribir un pedido de largo plazo con un punto de aprobación y probarlo en el chat de IA que ya usas.</p></div>
+<div class="resultado"><p><b>Arma la cadena de orquestación</b>: persona, coordinador, especialistas, herramientas, sistemas, verificación, persona.</p></div>
+<div class="resultado"><p><b>Escribir la ficha de calidad y la matriz de permisos</b>: qué es una respuesta correcta, cuándo detenerse, cuándo llamarte y qué no puede hacer el agente.</p></div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Para quién es</p>
+<h2>Hecho para quienes entienden el negocio</h2>
+<div class="publico">
+<div class="col sim">
+<p class="lbl">es para ti si</p>
+<ul>
+<li>Eres contador, gerente comercial, analista financiero, abogado o gerente de área y quieres rediseñar un proceso de tu empresa con agentes de IA.</li>
+<li>Ya usas ChatGPT, Claude o Copilot para tareas sencillas y sientes que estás «poniendo IA sobre el proceso antiguo».</li>
+<li>Nunca has programado y no tienes intención de hacerlo. Toda la práctica del curso se realiza en papel, en una hoja de cálculo o en un chat de IA.</li>
+</ul>
+</div>
+<div class="col nao">
+<p class="lbl">no es para ti si</p>
+<ul>
+<li>Quieres aprender a construir la conexión técnica entre agentes y sistemas (este curso enseña a especificar, no a programar).</li>
+<li>Quieres un curso con clases tradicionales en video.</li>
+<li>Buscas trucos de prompts para generar textos e imágenes.</li>
+</ul>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Ruta</p>
+<h2>Del proceso de hoy al agente de mañana</h2>
+<div class="aulas">
+<a class="au" href="curso.html#aula-1"><div class="num">1</div><div><h3>No es una página bonita. Es rediseñar el trabajo</h3><p>Llévate la distinción, en uno de tus procesos, entre «poner IA sobre lo anterior» y rediseñar de verdad.</p></div><div class="meta">20 min</div></a>
+<a class="au" href="curso.html#aula-2"><div class="num">2</div><div><h3>Cada proceso tiene seis eslabones</h3><p>Llévate un proceso real mapeado y los eslabones delegables identificados.</p></div><div class="meta">21 min</div></a>
+<a class="au" href="curso.html#aula-3"><div class="num">3</div><div><h3>Delega objetivos, no tareas</h3><p>Llévate un pedido de largo horizonte probado en un chat de IA, con un punto de aprobación.</p></div><div class="meta">24 min</div></a>
+<a class="au" href="curso.html#aula-4"><div class="num">4</div><div><h3>Quién coordina a quién: la cadena de orquestación</h3><p>Llévate los roles distribuidos entre el humano, el coordinador, los especialistas y la verificación.</p></div><div class="meta">22 min</div></a>
+<a class="au" href="curso.html#aula-5"><div class="num">5</div><div><h3>Un agente sin contexto sirve de poco</h3><p>Llévate el inventario de contexto: qué necesita el agente, dónde está y si tiene acceso.</p></div><div class="meta">23 min</div></a>
+<a class="au" href="curso.html#aula-6"><div class="num">6</div><div><h3>"¿Funcionó?" no basta</h3><p>Llévate la ficha de calidad: respuesta correcta, tolerancia, detenerse, llamar, probar.</p></div><div class="meta">24 min</div></a>
+<a class="au" href="curso.html#aula-7"><div class="num">7</div><div><h3>Quién puede hacer qué: gobernanza</h3><p>Llévate la matriz de permisos definida y los datos sensibles fuera de su alcance.</p></div><div class="meta">23 min</div></a>
+<a class="au" href="curso.html#aula-8"><div class="num">8</div><div><h3>El arquitecto de agentes: tu primer proceso rediseñado</h3><p>Llévate la especificación de una página y un ensayo simulado hecho en el chat.</p></div><div class="meta">24 min</div></a>
+</div>
+<p style="margin-top:28px"><a class="cta" href="curso.html#trilha">ver la ruta completa →</a></p>
+<p class="fontes" style="margin-top:22px">Después del curso, el <a href="https://inematds.github.io/kit-arquiteto-agentes/" rel="noopener" target="_blank">Kit del Arquitecto de Agentes</a> trae los siete modelos rellenables que generan la especificación de tu agente en una página.</p>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Cuadernos por profesión</p>
+<h2>Después del método, tu área</h2>
+<div class="resultados">
+<div class="resultado"><p><b><a href="https://inematds.github.io/arquiteto-agentes-saude/" rel="noopener" target="_blank">Agentes en la Clínica</a></b> — salud, 3 clases. El agente se encarga de lo administrativo (agenda, confirmación, rechazos); la historia clínica y las decisiones clínicas siempre quedan fuera.</p></div>
+<div class="resultado"><p><b><a href="https://inematds.github.io/arquiteto-agentes-contabil/" rel="noopener" target="_blank">Agentes en Contabilidad y Finanzas</a></b> — 3 clases. Quien registra no aprueba: el agente llega hasta la puerta de la firma, y el certificado y las contraseñas quedan bajo llave.</p></div>
+<div class="resultado"><p><b><a href="https://inematds.github.io/arquiteto-agentes-advocacia/" rel="noopener" target="_blank">Agentes en el Despacho de Abogados</a></b> — 3 clases. El agente lee, cuenta y prepara; el abogado decide, redacta la tesis y firma. Los plazos siempre requieren intervención humana.</p></div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Fuentes</p>
+<h2>En qué se basa este curso</h2>
+<p class="fontes">Microsoft, <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization" rel="noopener" target="_blank">Work Trend Index 2026</a> · Deloitte, <a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html" rel="noopener" target="_blank">State of AI in the Enterprise 2026</a>, <a href="https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html" rel="noopener" target="_blank">Agentic AI strategy</a>, <a href="https://www.deloitte.com/us/en/insights/topics/emerging-technologies/ai-agents-scaling-faster.html" rel="noopener" target="_blank">Agentic AI is scaling faster than guardrails</a> e <a href="https://www.deloitte.com/us/en/about/press-room/deloitte-survey-examines-ai-readiness-agentic-ai-success.html" rel="noopener" target="_blank">investigación sobre preparación para la IA</a> · OpenAI, <a href="https://openai.com/pt-BR/index/how-agents-are-transforming-work/" rel="noopener" target="_blank">Cómo los agentes están transformando el trabajo</a> · World Economic Forum, <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/" rel="noopener" target="_blank">Future of Jobs Report 2025</a> · McKinsey, <a href="https://www.mckinsey.com/capabilities/people-and-organization/our-insights/rewiring-talent-to-value-in-the-age-of-ai" rel="noopener" target="_blank">Rewiring talent strategy in the age of AI</a>.</p>
+</div></section>
+<footer><div class="wrap">Arquitecto del Trabajo con IA · INEMA.CLUB PRO</div></footer>
+</body>
+</html>
