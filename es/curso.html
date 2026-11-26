@@ -12,22 +12,22 @@
 <link href="../assets/aula.css" rel="stylesheet"/>
 <script>(function(){try{var m=document.querySelector('meta[name=curso]');var CK=(m&&m.content)||'v5:curso';var s=JSON.parse(localStorage.getItem(CK));if(s&&s.prefs&&s.prefs.theme)document.documentElement.setAttribute('data-theme',s.prefs.theme);}catch(e){}})();</script>
 <!--
-  PROTOCOLO DE DESCOBERTA (formato-curso-v5, Passo 0 — respondido pelo usuário antes da geração, 2026-09-06):
-  - Público específico: gestores, donos de pequenas e médias empresas e profissionais de área (não-programadores)
+  PROTOCOLO DE DESCOBERTA (formato-curso-v5, Passo 0 — respondido pelo usuário antes da geraçêo, 2026-09-06):
+  - Público específico: gestores, donos de pequenas e médias empresas e profissionais de área (nêo-programadores)
     que querem redesenhar processos da própria empresa para que agentes de IA executem partes deles.
   - Profissões-alvo (≥2): contador · gerente comercial (vendas) · analista financeiro · advogado.
-  - Familiaridade com tecnologia: usa ChatGPT/Copilot no dia a dia, planilha, CRM ou ERP da empresa; nunca programou, não usa terminal.
-  - Resultado prático esperado: pegar UM processo real da própria empresa, mapeá-lo (entrada → decisão → ação → verificação →
-    exceção → resultado), decidir o que delega a agentes e o que fica com humanos, e escrever a especificação do agente
-    com critérios de qualidade e regras de permissão.
-  - Tempo por sessão: 15–20 minutos por aula.
+  - Familiaridade com tecnologia: usa ChatGPT/Copilot no dia a dia, planilha, CRM ou ERP da empresa; nunca programou, nêo usa terminal.
+  - Resultado prático esperado: pegar UM processo real da própria empresa, mapeá-lo (entrada → decisêo → açêo → verificaçêo →
+    exceçêo → resultado), decidir o que delega a agentes e o que fica com humanos, e escrever a especificaçêo do agente
+    com critérios de qualidade e regras de permissêo.
+  - Tempo por sessêo: 15–20 minutos por aula.
   Fonte do conteúdo: texto do usuário sobre "Arquiteto de Trabalho com IA / Arquiteto de Agentes", com base em Microsoft Work Trend
   Index 2026, Deloitte (State of AI in the Enterprise 2026; Tech Trends 2026; Agentic AI scaling faster than guardrails; AI readiness survey),
   OpenAI (How agents are transforming work), World Economic Forum (Future of Jobs 2025) e McKinsey (Rewiring talent to value).
 
   AUDITORIA ANTI-CLONE (CHECKLIST-V5 §7) contra o último curso gerado (astra-5-prompts, 2026-09-06):
-  - Profissões: astra usou contadora autônoma · dono de clínica odontológica · corretor de imóveis. Aqui: contador (situações: classificação
-    de documentos fiscais, conciliação, fechamento mensal — nenhuma coincide com "propostas por semana/renovações" do astra),
+  - Profissões: astra usou contadora autônoma · dono de clínica odontológica · corretor de imóveis. Aqui: contador (situações: classificaçêo
+    de documentos fiscais, conciliaçêo, fechamento mensal — nenhuma coincide com "propostas por semana/renovações" do astra),
     gerente comercial, analista financeiro, advogado.
   - Modos de prática: astra = 1 tarefa + 5 prompt. Aqui: 4 tarefa · 2 prompt · 1 analise · 1 tarefa (misto).
   - Sequência de quadros: astra abria com qanchor no step 1 e qsteps cedo. Aqui a qanchor nunca abre a aula (steps 3–5) e os
@@ -171,7 +171,7 @@
 <section class="step" data-fig="1" data-kind="fundamento">
 <h2><span class="n">01</span> Usar IA y rediseñar el trabajo son cosas diferentes</h2>
 <p>Hoy casi todas las empresas «usan IA». Alguien abre un chat, pide un texto, lo copia y lo pega. El trabajo se volvió un poco más rápido, pero la secuencia de pasos sigue igual que antes, con las mismas personas haciendo los mismos relevos. Deloitte llamó a esto poner IA encima del proceso antiguo. Es como cambiar la máquina de escribir por una computadora y seguir imprimiendo todo para llevarlo de una sala a otra.</p>
-<p>Rediseñar es otra cosa. Es preguntarse: si un <span class="gterm" data-def="Programa de IA que recebe um objetivo, usa ferramentas e sistemas da empresa, executa vários passos sozinho e para em pontos combinados para pedir aprovação humana." tabindex="0">agente</span> puede ejecutar partes enteras del flujo, ¿quién todavía tiene que hacer qué? Un agente, aquí, no es el chat que responde una pregunta. Es un programa que recibe un objetivo, consulta los sistemas de la empresa, realiza varios pasos en secuencia y se detiene en los puntos que definiste para pedir tu aprobación.</p>
+<p>Rediseñar es otra cosa. Es preguntarse: si un <span class="gterm" data-def="Programa de IA que recebe um objetivo, usa ferramentas e sistemas da empresa, executa vários passos sozinho e para em pontos combinados para pedir aprovaçêo humana." tabindex="0">agente</span> puede ejecutar partes enteras del flujo, ¿quién todavía tiene que hacer qué? Un agente, aquí, no es el chat que responde una pregunta. Es un programa que recibe un objetivo, consulta los sistemas de la empresa, realiza varios pasos en secuencia y se detiene en los puntos que definiste para pedir tu aprobación.</p>
 <!-- ex-prof --><p>El contador Roberto, de una oficina con 40 clientes, usa IA para escribir el correo donde solicita los documentos faltantes. Ahorró diez minutos por cliente. Pero todavía abre cada carpeta, todavía revisa qué falta, todavía decide a quién cobrarle. Un rediseño preguntaría: ¿y si un agente revisara las 40 carpetas el lunes por la mañana, enumerara lo que falta en cada una y dejara los correos listos para que Roberto solo los aprobara?</p>
 <div class="mobfig" data-mobfig="1"></div>
 <button class="readbtn" data-read="s1">marcar como leído</button>
@@ -182,7 +182,7 @@
 <p>Microsoft lo llama <span class="gterm" data-def="Termo do Work Trend Index 2026 da Microsoft para profissionais que usam agentes em fluxos de várias etapas, montam sistemas com vários agentes, redesenham processos e criam padrões compartilhados de uso de IA." tabindex="0">Frontier Professionals</span> las personas que ya trabajan así: usan agentes en flujos de varias etapas, rediseñan procesos y crean patrones de uso para el equipo. El detalle que más te importa: en este grupo, las habilidades que más aumentaron su valor no fueron técnicas. Fueron el control de calidad de la IA y el pensamiento crítico.</p>
 <!-- ex-prof --><p>En el equipo comercial de una distribuidora, la gerente Cláudia dirige: define que la meta de la semana es reactivar a los clientes inactivos desde hace 90 días y que ninguna propuesta se envía sin que ella la revise. El agente ejecuta: separa a los clientes, recopila el historial de compras, prepara un acercamiento para cada uno y deja todo en cola para su aprobación. Cláudia pasó de redactar correos a dirigir una línea de trabajo.</p>
 <div class="qbefore-after">
-<div class="qba-col qba-before"><p class="qba-lbl">Antes</p><p class="qba-txt">Cláudia abre la hoja de cálculo, filtra los clientes inactivos, elige diez, le pide al chat «escribe un correo para reactivar a un cliente» diez veces, ajusta cada uno, lo envía y lo anota en el <span class="gterm" data-def="Sistema onde a empresa registra clientes, contatos, propostas e histórico de relacionamento. A sigla vem do inglês, gestão de relacionamento com o cliente." tabindex="0">CRM</span>. Una mañana entera.</p></div>
+<div class="qba-col qba-before"><p class="qba-lbl">Antes</p><p class="qba-txt">Cláudia abre la hoja de cálculo, filtra los clientes inactivos, elige diez, le pide al chat «escribe un correo para reactivar a un cliente» diez veces, ajusta cada uno, lo envía y lo anota en el <span class="gterm" data-def="Sistema onde a empresa registra clientes, contatos, propostas e histórico de relacionamento. A sigla vem do inglês, gestêo de relacionamento com o cliente." tabindex="0">CRM</span>. Una mañana entera.</p></div>
 <div class="qba-col qba-depois"><p class="qba-lbl">Después</p><p class="qba-txt">A las 8, el agente entrega la lista de los 30 clientes inactivos con mayor potencial, cada uno con su historial y un acercamiento listo. Cláudia la lee, ajusta tres, aprueba y el agente envía y registra todo. Cuarenta minutos.</p></div>
 <div class="qba-saldo"><b>Saldo:</b> de una mañana a cuarenta minutos, y de diez clientes a treinta, y la decisión final sigue en sus manos.</div>
 </div>
@@ -213,8 +213,8 @@
 <!-- ex-prof --><p>Para el contador Roberto, esto significa que el estudio que rediseñe primero el cierre mensual atenderá a 80 clientes con el equipo que hoy atiende a 40. Para la gerente Cláudia, significa que la competencia que rediseñe la reactivación de clientes contactará a todos los inactivos cada semana, mientras que su equipo contacta a diez. La oportunidad es para quien llegue primero.</p>
 <div class="quiz" data-answer="c">
 <p class="qk">Ponte a prueba</p><p class="q">Una empresa empezó a usar un chat de IA para redactar todas las propuestas comerciales. Las etapas del proceso siguen siendo las mismas, solo que ahora cada una es más rápida. Según el criterio de esta clase, esto es:</p>
-<button class="opt" data-fb="Não. Redesenho muda quem faz o quê e elimina etapas que só existiam por causa da passagem de mão em mão. Aqui as etapas e as pessoas são as mesmas." data-k="a">rediseño del proceso, porque el tiempo total disminuyó</button>
-<button class="opt" data-fb="Quase. Não é inútil, o ganho existe. Mas o critério da aula não é se ajudou, é se o desenho do trabalho mudou." data-k="b">un error, porque la IA no debería escribir propuestas</button>
+<button class="opt" data-fb="Nêo. Redesenho muda quem faz o quê e elimina etapas que só existiam por causa da passagem de mêo em mêo. Aqui as etapas e as pessoas sêo as mesmas." data-k="a">rediseño del proceso, porque el tiempo total disminuyó</button>
+<button class="opt" data-fb="Quase. Nêo é inútil, o ganho existe. Mas o critério da aula nêo é se ajudou, é se o desenho do trabalho mudou." data-k="b">un error, porque la IA no debería escribir propuestas</button>
 <button class="opt" data-fb="Exato. Ganho real, mas com a IA colocada em cima do processo antigo. O redesenho começaria perguntando quais etapas deixam de existir se um agente executar o fluxo de ponta a ponta." data-k="c">IA encima del proceso anterior: mejora, pero no lo rediseña</button>
 <p class="qfb"></p>
 </div>
@@ -250,7 +250,7 @@
 <path d="M38 146 h14 M162 146 h16" stroke="#7CE0C6" stroke-width="1.5"></path>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="12" y="188">5 cajas, 4 pasos → 1 agente, 2 decisiones</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; duas colunas: o que é dirigir (objetivo, contexto, limites, exceções) e o que é executar (passos repetíveis, consultar sistemas, preparar, registrar). A seta volta do agente ao humano nos pontos de aprovação." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; duas colunas: o que é dirigir (objetivo, contexto, limites, exceções) e o que é executar (passos repetíveis, consultar sistemas, preparar, registrar). A seta volta do agente ao humano nos pontos de aprovaçêo." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="160" rx="8" stroke="#7CE0C6" stroke-width="1.5" width="90" x="12" y="20"></rect>
 <text fill="#7CE0C6" font-family="monospace" font-size="9" x="22" y="40">el humano dirige</text>
 <text fill="#ECE6D9" font-family="monospace" font-size="8.5" x="22" y="66">objetivo</text>
@@ -281,7 +281,7 @@
 <rect height="40" rx="6" stroke="#7CE0C6" stroke-width="1.5" width="30" x="180" y="118"></rect><text fill="#7CE0C6" font-family="monospace" font-size="7.5" x="183" y="142">aprueba</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="12" y="186">línea discontinua = solo existía por el traspaso manual</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o filtro de quatro perguntas. Uma etapa entra por cima; se responde sim a julgamento, exceção, supervisão ou estratégia, sai para o lado humano; se responde não a todas, cai no funil do agente." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o filtro de quatro perguntas. Uma etapa entra por cima; se responde sim a julgamento, exceçêo, supervisêo ou estratégia, sai para o lado humano; se responde nêo a todas, cai no funil do agente." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="20" rx="4" stroke="#948DA6" stroke-width="1.5" width="60" x="80" y="10"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8.5" x="90" y="24">etapa</text>
 <path d="M110 30 v14" stroke="#948DA6" stroke-width="1.5"></path>
 <rect height="18" rx="3" stroke="#7CE0C6" stroke-width="1.2" width="100" x="60" y="44"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8" x="66" y="57">¿criterio?</text>
@@ -332,11 +332,11 @@
 <footer>Clase 1 · Arquitecto de Trabajo con IA · INEMA.CLUB PRO</footer>
 <script id="cards-1" type="application/json">
 [
-  {"front":"Sua equipe passou a pedir ao chat de IA todos os resumos de reunião. As reuniões, quem participa e o que se faz depois continuam iguais. Isso é redesenho? Por quê?","back":"Não. É IA colocada sobre o fluxo antigo: mesmas pessoas, mesmas etapas, só mais rápido. Redesenho começaria perguntando que etapas deixam de existir se um agente fizer várias de uma vez."},
-  {"front":"Uma etapa do seu processo é 'enviar a planilha conferida para o gerente'. Se um agente já conferiu e apontou divergências, essa etapa fica com quem: humano, agente ou desaparece?","back":"Tende a desaparecer. Ela existia para passar o trabalho de mão em mão. O que sobra é o gerente aprovar as divergências que o agente apontou."},
-  {"front":"Qual a diferença entre uma etapa de supervisão e uma etapa de exceção?","back":"Supervisão é conferir o que o agente fez antes de a consequência acontecer, em todo caso. Exceção é o caso que saiu do padrão e precisa de alguém que conhece a história."},
+  {"front":"Sua equipe passou a pedir ao chat de IA todos os resumos de reuniêo. As reuniões, quem participa e o que se faz depois continuam iguais. Isso é redesenho? Por quê?","back":"Nêo. É IA colocada sobre o fluxo antigo: mesmas pessoas, mesmas etapas, só mais rápido. Redesenho começaria perguntando que etapas deixam de existir se um agente fizer várias de uma vez."},
+  {"front":"Uma etapa do seu processo é 'enviar a planilha conferida para o gerente'. Se um agente já conferiu e apontou divergências, essa etapa fica com quem: humano, agente ou desaparece?","back":"Tende a desaparecer. Ela existia para passar o trabalho de mêo em mêo. O que sobra é o gerente aprovar as divergências que o agente apontou."},
+  {"front":"Qual a diferença entre uma etapa de supervisêo e uma etapa de exceçêo?","back":"Supervisêo é conferir o que o agente fez antes de a consequência acontecer, em todo caso. Exceçêo é o caso que saiu do padrêo e precisa de alguém que conhece a história."},
   {"front":"Um gestor diz: 'vou colocar um agente em cada uma das 14 etapas do processo'. Que erro ele está prestes a cometer?","back":"Automatizar o processo errado. Ele mantém as 14 etapas em vez de perguntar quais somem quando um agente faz várias de ponta a ponta. O processo continua lento e ninguém sabe por que a etapa 14 existe."},
-  {"front":"Na pesquisa da Microsoft, quais foram as duas habilidades humanas que mais subiram de importância entre quem já trabalha com agentes?","back":"Controle de qualidade da IA e pensamento crítico. Não foram habilidades técnicas."}
+  {"front":"Na pesquisa da Microsoft, quais foram as duas habilidades humanas que mais subiram de importância entre quem já trabalha com agentes?","back":"Controle de qualidade da IA e pensamento crítico. Nêo foram habilidades técnicas."}
 ]
 </script>
 <!-- COMPLETUDE aula-1 | tipo=FUNDAMENTO | steps=5
@@ -350,10 +350,10 @@
   [OK] pgoal-tempo        .pgoal com tempo declarado (~10 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-1"> presente (5 cartões: aplicação, decisão, contraste, diagnóstico, pergunta)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
+  [OK] cards              <script id="cards-1"> presente (5 cartões: aplicaçêo, decisêo, contraste, diagnóstico, pergunta)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
   [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz data-fb, step 05)
-  dosagem: pool = quiz + cartões + qbefore-after (step 02) + qanchor (step 04) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes.
+  dosagem: pool = quiz + cartões + qbefore-after (step 02) + qanchor (step 04) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes.
 -->
 </section>
 <!-- ===== AULA 2 · FUNDAMENTO ===== -->
@@ -423,9 +423,9 @@
 <!-- ex-prof --><p>En el equipo de la gerente Cláudia, la verificación de la reactivación de clientes consiste en que la propuesta preparada use el precio actual de la lista y no prometa un plazo inferior a siete días. El agente revisa ambas cosas en cada propuesta. La excepción es el cliente que tiene un cobro pendiente: el agente no lo contacta, lo separa en una lista y Cláudia decide qué hacer.</p>
 <div class="quiz" data-answer="b">
 <p class="qk">Ponte a prueba</p><p class="q">Un agente que prepara propuestas encuentra un cliente cuyo valor de compra es tres veces superior al promedio histórico. Según el método de esta clase, ¿qué debe hacer?</p>
-<button class="opt" data-fb="Não. Um valor fora do padrão é exatamente o sinal de exceção. Seguir em frente é o que a regra dos seis elos proíbe." data-k="a">preparar la propuesta normalmente, porque un valor alto es bueno</button>
-<button class="opt" data-fb="Isso. A verificação detectou algo fora do padrão; a exceção sempre desemboca num humano. O agente separa o caso e chama quem decide." data-k="b">detenerse, separar el caso y llamar al responsable humano</button>
-<button class="opt" data-fb="Não. Ajustar sozinho seria tomar uma decisão de julgamento. O agente prepara a informação; quem decide é a pessoa." data-k="c">reducir el valor al promedio y seguir</button>
+<button class="opt" data-fb="Nêo. Um valor fora do padrêo é exatamente o sinal de exceçêo. Seguir em frente é o que a regra dos seis elos proíbe." data-k="a">preparar la propuesta normalmente, porque un valor alto es bueno</button>
+<button class="opt" data-fb="Isso. A verificaçêo detectou algo fora do padrêo; a exceçêo sempre desemboca num humano. O agente separa o caso e chama quem decide." data-k="b">detenerse, separar el caso y llamar al responsable humano</button>
+<button class="opt" data-fb="Nêo. Ajustar sozinho seria tomar uma decisêo de julgamento. O agente prepara a informaçêo; quem decide é a pessoa." data-k="c">reducir el valor al promedio y seguir</button>
 <p class="qfb"></p>
 </div>
 <div class="mobfig" data-mobfig="4"></div>
@@ -457,7 +457,7 @@
 </div>
 <aside class="rail"><div class="railsticky">
 <div class="figstage">
-<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; os seis elos em sequência. As setas seguem entrada, decisão, ação, verificação e resultado; a exceção (âmbar) sai da verificação para o lado e volta a um humano." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; os seis elos em sequência. As setas seguem entrada, decisêo, açêo, verificaçêo e resultado; a exceçêo (âmbar) sai da verificaçêo para o lado e volta a um humano." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="24" rx="4" stroke="#948DA6" stroke-width="1.5" width="56" x="14" y="20"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8.5" x="22" y="36">entrada</text>
 <path d="M42 44 v14" stroke="#948DA6" stroke-width="1.5"></path>
 <rect height="24" rx="4" stroke="#948DA6" stroke-width="1.5" width="56" x="14" y="58"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8.5" x="22" y="74">decisión</text>
@@ -473,7 +473,7 @@
 <circle cx="198" cy="146" r="10" stroke="#F2B45C" stroke-width="1.5"></circle><text fill="#F2B45C" font-family="monospace" font-size="9" x="194" y="150">H</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="112" y="40">11 etapas se convierten</text><text fill="#6C6580" font-family="monospace" font-size="8" x="112" y="52">6 eslabones</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o teste dos cinco minutos. Entrada e ação cabem numa explicação curta (relógio cheio até a marca), por isso caem do lado delegável; a condição (âmbar) é que a ação seja reversível ou aprovada antes." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o teste dos cinco minutos. Entrada e açêo cabem numa explicaçêo curta (relógio cheio até a marca), por isso caem do lado delegável; a condiçêo (âmbar) é que a açêo seja reversível ou aprovada antes." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <circle cx="60" cy="70" r="40" stroke="#948DA6" stroke-width="2"></circle>
 <path d="M60 70 L60 34 A36 36 0 0 1 96 70 Z" fill="#7CE0C6" opacity=".85"></path>
 <path d="M60 70 v-30 M60 70 h26" stroke="#0E0D14" stroke-width="2"></path>
@@ -485,7 +485,7 @@
 <text fill="#F2B45C" font-family="monospace" font-size="7.5" x="130" y="120">condición:</text><text fill="#F2B45C" font-family="monospace" font-size="7.5" x="130" y="132">reversible o</text><text fill="#F2B45C" font-family="monospace" font-size="7.5" x="130" y="142">aprobada antes</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="14" y="184">cabe en una mañana de capacitación → cabe en un agente</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a decisão se bifurca. Duas pessoas treinadas chegam à mesma resposta? Se sim (regra), o caminho verde vai ao agente. Se não (julgamento), o agente só prepara a informação e o círculo humano decide." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a decisêo se bifurca. Duas pessoas treinadas chegam à mesma resposta? Se sim (regra), o caminho verde vai ao agente. Se nêo (julgamento), o agente só prepara a informaçêo e o círculo humano decide." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <polygon fill="#221f2e" points="110,18 160,52 110,86 60,52" stroke="#948DA6" stroke-width="1.5"></polygon>
 <text fill="#ECE6D9" font-family="monospace" font-size="7.5" x="84" y="50">la misma respuesta</text><text fill="#ECE6D9" font-family="monospace" font-size="7.5" x="92" y="62">¿siempre?</text>
 <path d="M60 52 h-20 v70" fill="none" stroke="#7CE0C6" stroke-width="1.5"></path>
@@ -498,7 +498,7 @@
 <text fill="#6C6580" font-family="monospace" font-size="7" x="78" y="132">agente prepara</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="30" y="184">"¿valor &gt; 5 mil?" regla · "¿vale la pena hacer una excepción?" criterio</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a verificação como portão. A ação passa pelo portão verde; se confere, segue ao resultado. Se não confere, o desvio âmbar é a exceção, e a exceção termina sempre num humano, nunca em outra ação automática." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a verificaçêo como portêo. A açêo passa pelo portêo verde; se confere, segue ao resultado. Se nêo confere, o desvio âmbar é a exceçêo, e a exceçêo termina sempre num humano, nunca em outra açêo automática." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="26" rx="4" stroke="#948DA6" stroke-width="1.5" width="50" x="14" y="80"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8.5" x="26" y="97">acción</text>
 <path d="M64 93 h22" stroke="#948DA6" stroke-width="1.5"></path>
 <rect fill="#7CE0C6" height="46" rx="3" width="14" x="86" y="70"></rect><rect height="46" rx="3" stroke="#7CE0C6" stroke-width="1.5" width="14" x="86" y="70"></rect>
@@ -512,7 +512,7 @@
 <circle cx="182" cy="182" r="9" stroke="#F2B45C" stroke-width="1.5"></circle><text fill="#F2B45C" font-family="monospace" font-size="8.5" x="178" y="186">H</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="14" y="186">el agente revisa; la persona decide qué es inusual</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o mapa se escreve do fim para o começo: primeiro o resultado (caixa verde, à direita), depois a entrada, depois o meio. As etapas cinza tracejadas não contribuem para o resultado e caem fora." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o mapa se escreve do fim para o começo: primeiro o resultado (caixa verde, à direita), depois a entrada, depois o meio. As etapas cinza tracejadas nêo contribuem para o resultado e caem fora." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#221f2e" height="60" rx="6" stroke="#7CE0C6" stroke-width="2" width="58" x="150" y="70"></rect>
 <text fill="#7CE0C6" font-family="monospace" font-size="8.5" x="156" y="96">resultado</text><text fill="#948DA6" font-family="monospace" font-size="7.5" x="160" y="110">1 frase</text>
 <text fill="#7CE0C6" font-family="monospace" font-size="8" x="150" y="60">1º</text>
@@ -555,11 +555,11 @@
 <footer>Clase 2 · Arquitecto de Trabajo con IA · INEMA.CLUB PRO</footer>
 <script id="cards-2" type="application/json">
 [
-  {"front":"No seu processo, a decisão 'aprovar desconto acima de 10%' foi marcada como regra. Um colega diz que é julgamento. Que pergunta resolve a discordância?","back":"Duas pessoas bem treinadas, com a mesma informação, chegariam sempre à mesma resposta? Se sim, é regra e vai para o agente. Se competentes podem discordar, é julgamento e fica com a pessoa."},
-  {"front":"Um agente lançou 200 notas fiscais e o total ficou 1.200 reais acima do esperado. Ele tem instrução de 'corrigir e seguir'. O que está errado no desenho?","back":"A exceção está desembocando em outra ação automática. Pelo método, exceção termina sempre num humano: o agente para, separa e chama quem decide."},
-  {"front":"Você escreveu o resultado do processo como 'relatório enviado à diretoria'. Como você reescreveria no formato que a aula pede?","back":"Dizendo o que a pessoa do outro lado passa a saber ou ter, por exemplo: 'a diretoria sabe até o dia 3 quais contas estouraram e por quê'. Etapas que não servem a essa frase revelam-se dispensáveis."},
-  {"front":"Por que se escreve o mapa de seis elos começando pelo resultado e não pela entrada?","back":"Porque o resultado é o critério para julgar todas as etapas. Com ele claro, as etapas que não contribuem aparecem, e é aí que o redesenho começa."},
-  {"front":"Qual a diferença entre uma ação que um agente pode executar direto e uma que ele só pode preparar?","back":"Ação reversível ou aprovada antes pode ser executada (lançar num rascunho). Ação com consequência externa imediata (enviar ao cliente) precisa de aprovação antes."}
+  {"front":"No seu processo, a decisêo 'aprovar desconto acima de 10%' foi marcada como regra. Um colega diz que é julgamento. Que pergunta resolve a discordância?","back":"Duas pessoas bem treinadas, com a mesma informaçêo, chegariam sempre à mesma resposta? Se sim, é regra e vai para o agente. Se competentes podem discordar, é julgamento e fica com a pessoa."},
+  {"front":"Um agente lançou 200 notas fiscais e o total ficou 1.200 reais acima do esperado. Ele tem instruçêo de 'corrigir e seguir'. O que está errado no desenho?","back":"A exceçêo está desembocando em outra açêo automática. Pelo método, exceçêo termina sempre num humano: o agente para, separa e chama quem decide."},
+  {"front":"Você escreveu o resultado do processo como 'relatório enviado à diretoria'. Como você reescreveria no formato que a aula pede?","back":"Dizendo o que a pessoa do outro lado passa a saber ou ter, por exemplo: 'a diretoria sabe até o dia 3 quais contas estouraram e por quê'. Etapas que nêo servem a essa frase revelam-se dispensáveis."},
+  {"front":"Por que se escreve o mapa de seis elos começando pelo resultado e nêo pela entrada?","back":"Porque o resultado é o critério para julgar todas as etapas. Com ele claro, as etapas que nêo contribuem aparecem, e é aí que o redesenho começa."},
+  {"front":"Qual a diferença entre uma açêo que um agente pode executar direto e uma que ele só pode preparar?","back":"Açêo reversível ou aprovada antes pode ser executada (lançar num rascunho). Açêo com consequência externa imediata (enviar ao cliente) precisa de aprovaçêo antes."}
 ]
 </script>
 <!-- COMPLETUDE aula-2 | tipo=FUNDAMENTO | steps=5
@@ -573,10 +573,10 @@
   [OK] pgoal-tempo        .pgoal com tempo declarado (~12 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-2"> presente (5 cartões: decisão, diagnóstico, aplicação, pergunta, contraste)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
+  [OK] cards              <script id="cards-2"> presente (5 cartões: decisêo, diagnóstico, aplicaçêo, pergunta, contraste)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
   [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz data-fb, step 04)
-  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes.
+  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes.
 -->
 </section>
 <!-- ===== AULA 3 · FERRAMENTA ===== -->
@@ -667,19 +667,19 @@
 <h3 class="ph">Escribe y ejecuta tu primer pedido de horizonte largo</h3>
 <p class="pgoal">En unos 15 minutos, adaptar el pedido de abajo al proceso que mapeaste, pegarlo en un chat de IA y recibir un plan de hasta seis líneas para aprobar.</p>
 <p class="psafe">Usa solo datos ficticios o una copia con nombres, documentos y valores modificados: el chat es un servicio externo a tu empresa. No se envía nada a ningún cliente, porque la solicitud termina antes de cualquier envío. Si la respuesta parece extraña, borra la conversación y vuelve a pegarla con el elemento que faltaba.</p>
-<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Você vai atuar como meu assistente de processo. Antes de executar, me mostre o plano em até 6 linhas e espere minha aprovação.
+<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Você vai atuar como meu assistente de processo. Antes de executar, me mostre o plano em até 6 linhas e espere minha aprovaçêo.
 
-OBJETIVO: &lt;o resultado do seu processo, na frase da aula 2. Ex.: preparar uma abordagem de reativação para cada cliente sem compra há mais de 90 dias&gt;
+OBJETIVO: &lt;o resultado do seu processo, na frase da aula 2. Ex.: preparar uma abordagem de reativaçêo para cada cliente sem compra há mais de 90 dias&gt;
 
-CONTEXTO: &lt;o que a IA precisa saber da sua empresa. Ex.: vendemos material de construção para lojistas; a tabela de preços e a lista de clientes fictícia estão em anexo; prazo padrão de entrega é 7 dias&gt;
+CONTEXTO: &lt;o que a IA precisa saber da sua empresa. Ex.: vendemos material de construçêo para lojistas; a tabela de preços e a lista de clientes fictícia estêo em anexo; prazo padrêo de entrega é 7 dias&gt;
 
-RESTRIÇÕES: &lt;o que não pode. Ex.: não prometa prazo menor que 7 dias; não use preço fora da tabela; não aborde cliente com cobrança em aberto, coloque numa lista separada com o motivo&gt;
+RESTRIÇÕES: &lt;o que nêo pode. Ex.: nêo prometa prazo menor que 7 dias; nêo use preço fora da tabela; nêo aborde cliente com cobrança em aberto, coloque numa lista separada com o motivo&gt;
 
 CRITÉRIO DE SUCESSO: &lt;como vou saber que ficou bom. Ex.: cada abordagem cita o último produto comprado pelo cliente e tem no máximo 6 linhas&gt;
 
-PONTO DE APROVAÇÃO: não envie nem registre nada. Ao terminar, me apresente as abordagens em lista, com um registro do que você considerou e descartou, e espere meu ok.
+PONTO DE APROVAÇêO: nêo envie nem registre nada. Ao terminar, me apresente as abordagens em lista, com um registro do que você considerou e descartou, e espere meu ok.
 
-Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
+Se faltar informaçêo para decidir algo, pergunte antes de supor.</pre></div>
 <ol class="psteps">
 <li><label><input data-ptask="1" type="checkbox"/> Copia la solicitud y reemplaza cada fragmento entre &lt; &gt; por tu proceso, usando el mapa de la clase 2. Una solicitud en blanco indica un hueco en el mapa: anótalo y complétalo como puedas.</label></li>
 <li><label><input data-ptask="2" type="checkbox"/> Prepara un anexo ficticio pequeño (basta con una hoja de cálculo con 10 filas inventadas) y abre una conversación nueva en el chat de IA que ya usas.</label></li>
@@ -691,7 +691,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </div>
 <aside class="rail"><div class="railsticky">
 <div class="figstage">
-<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; em cima, a tarefa pequena: doze idas e voltas, e a sequência (linha cinza) fica na mão do humano. Embaixo, o objetivo delegado: um pedido, o agente carrega a sequência de passos e o humano só entra no ponto âmbar de aprovação." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; em cima, a tarefa pequena: doze idas e voltas, e a sequência (linha cinza) fica na mêo do humano. Embaixo, o objetivo delegado: um pedido, o agente carrega a sequência de passos e o humano só entra no ponto âmbar de aprovaçêo." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <text fill="#948DA6" font-family="monospace" font-size="9" x="12" y="20">tarea pequeña</text>
 <circle cx="20" cy="46" r="7" stroke="#7CE0C6" stroke-width="1.5"></circle>
 <path d="M30 42 h18 M48 50 h-18 M56 42 h18 M74 50 h-18 M82 42 h18 M100 50 h-18 M108 42 h18 M126 50 h-18 M134 42 h18 M152 50 h-18 M160 42 h18 M178 50 h-18 M186 42 h18" stroke="#6C6580" stroke-width="1.2"></path>
@@ -720,7 +720,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <rect height="22" rx="4" stroke="#948DA6" stroke-width="1.2" width="84" x="124" y="148"></rect><text fill="#948DA6" font-family="monospace" font-size="7.5" x="130" y="160">excepción +</text><text fill="#948DA6" font-family="monospace" font-size="7.5" x="130" y="168">criterio</text>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="12" y="190">pedido = mapa de la clase 2 traducido</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o fluxo no chat: pedido entra, a IA devolve o plano (caixa âmbar), o humano aprova, e só então a execução acontece. O plano antes da execução transforma um chat comum num agente com ponto de aprovação." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o fluxo no chat: pedido entra, a IA devolve o plano (caixa âmbar), o humano aprova, e só entêo a execuçêo acontece. O plano antes da execuçêo transforma um chat comum num agente com ponto de aprovaçêo." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="164" rx="10" stroke="#37324a" stroke-width="1.5" width="192" x="14" y="18"></rect>
 <rect fill="#221f2e" height="18" rx="10" width="192" x="14" y="18"></rect><circle cx="26" cy="27" fill="#6C6580" r="3"></circle><circle cx="36" cy="27" fill="#6C6580" r="3"></circle>
 <rect fill="#2A2637" height="24" rx="8" width="108" x="90" y="46"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8" x="98" y="61">pedido: 5 elementos</text>
@@ -743,7 +743,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <rect fill="#221f2e" height="26" rx="5" stroke="#948DA6" stroke-width="1.2" width="196" x="12" y="156"></rect>
 <text fill="#ECE6D9" font-family="monospace" font-size="7.5" x="20" y="173">registro: consideró, descartó, regla aplicada</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o custo de um erro ao longo dos passos. Sem ponto de aprovação (linha cinza), um erro no passo 2 contamina os passos seguintes e cresce. Com aprovação após o plano (marca âmbar), o erro é pego enquanto ainda é barato." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o custo de um erro ao longo dos passos. Sem ponto de aprovaçêo (linha cinza), um erro no passo 2 contamina os passos seguintes e cresce. Com aprovaçêo após o plano (marca âmbar), o erro é pego enquanto ainda é barato." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <path d="M24 170 h180 M24 170 v-140" stroke="#37324a" stroke-width="1.5"></path>
 <text fill="#948DA6" font-family="monospace" font-size="7.5" transform="rotate(-90 14 60)" x="8" y="40">costo del error</text>
 <text fill="#948DA6" font-family="monospace" font-size="8" x="90" y="188">pasos 1 → 10</text>
@@ -783,9 +783,9 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <script id="cards-3" type="application/json">
 [
   {"front":"Você pediu à IA 'analise nossos fornecedores e me diga o que acha'. Voltou uma lista genérica. Qual peça do pedido faltou e como você a escreveria?","back":"Faltaram critério de sucesso e restrições. Por exemplo: 'aponte os 5 fornecedores com maior atraso médio em 2026, com a conta feita a partir da planilha anexa, e ignore fornecedores com menos de 3 entregas'."},
-  {"front":"A IA devolveu o resultado completo sem mostrar plano nenhum, embora você tenha pedido. O que fazer, e por quê isso importa?","back":"Responder 'pare, primeiro me mostre o plano' e só aprovar depois. O plano antes da execução é onde um erro no passo 2 é pego antes de contaminar os passos 3 a 10."},
-  {"front":"Um colega quer testar a delegação colando a lista real de clientes, com telefones, no chat. O que você diz a ele?","back":"Trocar por uma cópia com nomes, documentos e valores fictícios. A lógica do pedido se testa igual e o chat é um serviço externo à empresa; dado real de cliente não deve sair do prédio para um teste."},
-  {"front":"O que muda na resposta da IA quando você inclui a linha 'se faltar informação, pergunte antes de supor'?","back":"Em vez de preencher a lacuna com um chute razoável para ela (e possivelmente errado para a sua empresa) e seguir, ela devolve uma pergunta e espera. É o comportamento de uma pessoa competente recebendo delegação."}
+  {"front":"A IA devolveu o resultado completo sem mostrar plano nenhum, embora você tenha pedido. O que fazer, e por quê isso importa?","back":"Responder 'pare, primeiro me mostre o plano' e só aprovar depois. O plano antes da execuçêo é onde um erro no passo 2 é pego antes de contaminar os passos 3 a 10."},
+  {"front":"Um colega quer testar a delegaçêo colando a lista real de clientes, com telefones, no chat. O que você diz a ele?","back":"Trocar por uma cópia com nomes, documentos e valores fictícios. A lógica do pedido se testa igual e o chat é um serviço externo à empresa; dado real de cliente nêo deve sair do prédio para um teste."},
+  {"front":"O que muda na resposta da IA quando você inclui a linha 'se faltar informaçêo, pergunte antes de supor'?","back":"Em vez de preencher a lacuna com um chute razoável para ela (e possivelmente errado para a sua empresa) e seguir, ela devolve uma pergunta e espera. É o comportamento de uma pessoa competente recebendo delegaçêo."}
 ]
 </script>
 <!-- COMPLETUDE aula-3 | tipo=FERRAMENTA | steps=5
@@ -799,10 +799,10 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
   [OK] pgoal-tempo        .pgoal com tempo declarado (~15 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-3"> presente (4 cartões opcionais: diagnóstico, decisão, aplicação, pergunta)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
-  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigação não se aplica); sem teste-se opcional
-  dosagem: pool = qerr (step 05) + qsteps (step 03) obrigatórios + cartões opcionais = 3 (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. data-versao nos steps 03 e 05 (ferramenta).
+  [OK] cards              <script id="cards-3"> presente (4 cartões opcionais: diagnóstico, decisêo, aplicaçêo, pergunta)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
+  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigaçêo nêo se aplica); sem teste-se opcional
+  dosagem: pool = qerr (step 05) + qsteps (step 03) obrigatórios + cartões opcionais = 3 (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. data-versao nos steps 03 e 05 (ferramenta).
 -->
 </section>
 <!-- ===== AULA 4 · FUNDAMENTO ===== -->
@@ -867,14 +867,14 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </section>
 <section class="step" data-fig="4" data-kind="fundamento">
 <h2><span class="n">04</span> Las herramientas y los sistemas son donde el agente pone las manos en el mundo</h2>
-<p>Un agente que solo conversa no ejecuta nada. Para actuar, necesita <b>herramientas</b>: leer un documento adjunto, hacer un cálculo, buscar en un registro, escribir en una hoja de cálculo, preparar un correo electrónico. Y las herramientas tienen que llegar a los <b>sistemas</b> de la empresa. Aquí aparece una palabra que vas a escuchar mucho y que no tienes que temer: <span class="gterm" data-def="Porta de serviço de um sistema: um jeito de um programa pedir e receber informação de outro programa sem ninguém clicar em tela. A sigla vem do inglês." tabindex="0">API</span>. Una API es la puerta de servicio de un sistema, la puerta por la que otro programa entra para solicitar o dejar información, sin que nadie haga clic en una pantalla. Casi todos los sistemas empresariales modernos tienen una.</p>
-<p>También escucharás <span class="gterm" data-def="Padrão aberto que define como um agente de IA se conecta a ferramentas e sistemas. Funciona como uma tomada padronizada: qualquer sistema que siga o padrão pode ser ligado a qualquer agente sem adaptador feito sob medida." tabindex="0">MCP</span>, que funciona como un enchufe estandarizado: en vez de que cada agente necesite un adaptador hecho a medida para cada sistema, todos usan la misma conexión. Para ti, como arquitecto, esto significa una pregunta práctica por sistema: ¿tiene una puerta de servicio y quién en la empresa sabe abrirla? La construcción en sí es trabajo de quienes hacen tecnología. Decidir a qué puede acceder el agente es tu responsabilidad.</p>
+<p>Un agente que solo conversa no ejecuta nada. Para actuar, necesita <b>herramientas</b>: leer un documento adjunto, hacer un cálculo, buscar en un registro, escribir en una hoja de cálculo, preparar un correo electrónico. Y las herramientas tienen que llegar a los <b>sistemas</b> de la empresa. Aquí aparece una palabra que vas a escuchar mucho y que no tienes que temer: <span class="gterm" data-def="Porta de serviço de um sistema: um jeito de um programa pedir e receber informaçêo de outro programa sem ninguém clicar em tela. A sigla vem do inglês." tabindex="0">API</span>. Una API es la puerta de servicio de un sistema, la puerta por la que otro programa entra para solicitar o dejar información, sin que nadie haga clic en una pantalla. Casi todos los sistemas empresariales modernos tienen una.</p>
+<p>También escucharás <span class="gterm" data-def="Padrêo aberto que define como um agente de IA se conecta a ferramentas e sistemas. Funciona como uma tomada padronizada: qualquer sistema que siga o padrêo pode ser ligado a qualquer agente sem adaptador feito sob medida." tabindex="0">MCP</span>, que funciona como un enchufe estandarizado: en vez de que cada agente necesite un adaptador hecho a medida para cada sistema, todos usan la misma conexión. Para ti, como arquitecto, esto significa una pregunta práctica por sistema: ¿tiene una puerta de servicio y quién en la empresa sabe abrirla? La construcción en sí es trabajo de quienes hacen tecnología. Decidir a qué puede acceder el agente es tu responsabilidad.</p>
 <!-- ex-prof --><p>El contador Roberto enumeró los sistemas del cierre: el programa de contabilidad, la aplicación donde los clientes envían sus facturas y el banco, mediante el estado de cuenta. El programa de contabilidad tiene una API, confirmó el proveedor. La aplicación exporta una hoja de cálculo por día. El estado de cuenta llega en un archivo del banco. Tres sistemas, tres formas de acceso, y ninguna requiere que Roberto programe nada.</p>
 <div class="quiz" data-answer="a">
 <p class="qk">Ponte a prueba</p><p class="q">Un especialista de la cadena le devolvió una duda al coordinador: «el cliente X tiene dos fichas en el registro, ¿cuál uso?». ¿Quién debe resolverla?</p>
-<button class="opt" data-fb="Correto. O coordenador responde com regra se já tiver uma ('use a ficha com compra mais recente'); se não tiver, sobe para o humano. Ele é o único que vê o processo inteiro e onde vivem as regras de parada." data-k="a">el coordinador, con una regla que ya existe, o escalando al humano si no existe</button>
-<button class="opt" data-fb="Não. O especialista tem instrução curta e contexto pequeno de propósito; decidir sozinho seria supor, e supor é o que a aula 3 pediu para evitar." data-k="b">el propio especialista, eligiendo la ficha que parezca más completa</button>
-<button class="opt" data-fb="Não. A verificação confere o conjunto no fim; ela não decide no meio do caminho. A dúvida é do coordenador." data-k="c">la verificación, al final del proceso</button>
+<button class="opt" data-fb="Correto. O coordenador responde com regra se já tiver uma ('use a ficha com compra mais recente'); se nêo tiver, sobe para o humano. Ele é o único que vê o processo inteiro e onde vivem as regras de parada." data-k="a">el coordinador, con una regla que ya existe, o escalando al humano si no existe</button>
+<button class="opt" data-fb="Nêo. O especialista tem instruçêo curta e contexto pequeno de propósito; decidir sozinho seria supor, e supor é o que a aula 3 pediu para evitar." data-k="b">el propio especialista, eligiendo la ficha que parezca más completa</button>
+<button class="opt" data-fb="Nêo. A verificaçêo confere o conjunto no fim; ela nêo decide no meio do caminho. A dúvida é do coordenador." data-k="c">la verificación, al final del proceso</button>
 <p class="qfb"></p>
 </div>
 <div class="mobfig" data-mobfig="4"></div>
@@ -922,7 +922,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <rect height="30" rx="5" stroke="#7CE0C6" stroke-width="1.5" width="32" x="176" y="122"></rect><rect fill="#7CE0C6" height="14" rx="2" width="20" x="182" y="130"></rect>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="12" y="172">instrucción corta, contexto pequeño,</text><text fill="#6C6580" font-family="monospace" font-size="8" x="12" y="184">y sabes dónde hacer cambios</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a cadeia completa, de cima para baixo: humano, coordenador, especialistas (três caixas), ferramentas, sistemas, verificação, humano. As duas pontas verdes são a mesma pessoa em dois momentos: define no início, decide no fim." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a cadeia completa, de cima para baixo: humano, coordenador, especialistas (três caixas), ferramentas, sistemas, verificaçêo, humano. As duas pontas verdes sêo a mesma pessoa em dois momentos: define no início, decide no fim." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <circle cx="110" cy="16" r="9" stroke="#7CE0C6" stroke-width="1.5"></circle><text fill="#7CE0C6" font-family="monospace" font-size="8.5" x="106" y="20">H</text>
 <path d="M110 25 v9" stroke="#948DA6" stroke-width="1.2"></path>
 <rect fill="#221f2e" height="18" rx="4" stroke="#F2B45C" stroke-width="1.5" width="80" x="70" y="34"></rect><text fill="#F2B45C" font-family="monospace" font-size="8" x="80" y="47">coordinador</text>
@@ -942,7 +942,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="130" y="20">define el objetivo</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="194">los 6 eslabones tienen un responsable</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o coordenador (âmbar) recebe um objetivo, o divide em três partes, entrega cada uma, espera, junta e passa adiante. A seta que volta para cima é uma dúvida que ele não tem regra para resolver: sobe ao humano." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o coordenador (âmbar) recebe um objetivo, o divide em três partes, entrega cada uma, espera, junta e passa adiante. A seta que volta para cima é uma dúvida que ele nêo tem regra para resolver: sobe ao humano." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#221f2e" height="40" rx="6" stroke="#F2B45C" stroke-width="2" width="60" x="14" y="80"></rect>
 <text fill="#F2B45C" font-family="monospace" font-size="7.5" x="20" y="97">coordina</text><text fill="#948DA6" font-family="monospace" font-size="7.5" x="20" y="110">divide·junta</text>
 <path d="M74 90 h30 v-50 h20 M74 100 h50 M74 110 h30 v50 h20" fill="none" stroke="#948DA6" stroke-width="1.2"></path>
@@ -967,7 +967,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <rect height="28" rx="4" stroke="#6C6580" stroke-dasharray="3 3" stroke-width="1.5" width="62" x="146" y="146"></rect><text fill="#948DA6" font-family="monospace" font-size="7.5" x="158" y="164">¿base de datos?</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="190">puerta de servicio = API</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o executor entrega o resultado; um verificador separado recebe só o resultado e os critérios escritos. O que confere segue ao humano (verde); o que falha volta ao coordenador com motivo (âmbar); o que é estranho e não está em critério nenhum sobe direto." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o executor entrega o resultado; um verificador separado recebe só o resultado e os critérios escritos. O que confere segue ao humano (verde); o que falha volta ao coordenador com motivo (âmbar); o que é estranho e nêo está em critério nenhum sobe direto." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="26" rx="4" stroke="#948DA6" stroke-width="1.5" width="60" x="14" y="30"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8" x="20" y="47">ejecutor</text>
 <path d="M74 43 h26" stroke="#948DA6" stroke-width="1.5"></path>
 <rect fill="#221f2e" height="38" rx="5" stroke="#7CE0C6" stroke-width="2" width="70" x="100" y="24"></rect>
@@ -1009,10 +1009,10 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <script id="cards-4" type="application/json">
 [
   {"front":"Seu processo de compras tem sete especialistas desenhados. O que isso sugere, e o que você faz?","back":"Provavelmente algum especialista está fazendo dois trabalhos, ou dois fazem o mesmo. Entre dois e cinco tipos de trabalho é o normal. Junte ou reparta até cada um ter um tipo de trabalho só."},
-  {"front":"Um resumo de contrato voltou com a data de vencimento errada. Na cadeia, quem deveria ter pego esse erro antes de você, e o que ele precisava ter em mãos?","back":"O verificador: um agente à parte, que só vê o que saiu e a lista de condições escritas (ex.: 'toda data citada existe no documento, na página indicada'). Quem escreveu o resumo não confere o próprio texto."},
-  {"front":"Qual a diferença entre o papel do coordenador e o de um especialista quando surge uma dúvida?","back":"O especialista não decide: devolve a dúvida. O coordenador resolve com uma regra que já tem ou sobe para o humano, porque é o único que vê o processo inteiro."},
-  {"front":"Você quer que o agente leia o programa de contabilidade da empresa. Que pergunta prática você faz, e para quem?","back":"'Esse sistema tem porta de serviço para outros programas lerem e escreverem, e quem sabe abrir?' Para o fornecedor do sistema ou para quem cuida de tecnologia. Decidir o alcance é seu; construir a conexão é deles."},
-  {"front":"Por que separar a verificação em um agente próprio, em vez de pedir ao executor que 'confira antes de entregar'?","back":"Pelo mesmo motivo de separar quem paga de quem aprova: quem fez tende a achar que fez certo. Um verificador sem participação no trabalho encontra erros que o executor não vê."}
+  {"front":"Um resumo de contrato voltou com a data de vencimento errada. Na cadeia, quem deveria ter pego esse erro antes de você, e o que ele precisava ter em mêos?","back":"O verificador: um agente à parte, que só vê o que saiu e a lista de condições escritas (ex.: 'toda data citada existe no documento, na página indicada'). Quem escreveu o resumo nêo confere o próprio texto."},
+  {"front":"Qual a diferença entre o papel do coordenador e o de um especialista quando surge uma dúvida?","back":"O especialista nêo decide: devolve a dúvida. O coordenador resolve com uma regra que já tem ou sobe para o humano, porque é o único que vê o processo inteiro."},
+  {"front":"Você quer que o agente leia o programa de contabilidade da empresa. Que pergunta prática você faz, e para quem?","back":"'Esse sistema tem porta de serviço para outros programas lerem e escreverem, e quem sabe abrir?' Para o fornecedor do sistema ou para quem cuida de tecnologia. Decidir o alcance é seu; construir a conexêo é deles."},
+  {"front":"Por que separar a verificaçêo em um agente próprio, em vez de pedir ao executor que 'confira antes de entregar'?","back":"Pelo mesmo motivo de separar quem paga de quem aprova: quem fez tende a achar que fez certo. Um verificador sem participaçêo no trabalho encontra erros que o executor nêo vê."}
 ]
 </script>
 <!-- COMPLETUDE aula-4 | tipo=FUNDAMENTO | steps=5
@@ -1026,10 +1026,10 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
   [OK] pgoal-tempo        .pgoal com tempo declarado (~12 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-4"> presente (5 cartões: diagnóstico, diagnóstico, contraste, aplicação, pergunta)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
+  [OK] cards              <script id="cards-4"> presente (5 cartões: diagnóstico, diagnóstico, contraste, aplicaçêo, pergunta)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
   [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz data-fb, step 04)
-  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. jargão de plataforma tratado: API e MCP definidos com analogia + .gterm.
+  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. jargêo de plataforma tratado: API e MCP definidos com analogia + .gterm.
 -->
 </section>
 <!-- ===== AULA 5 · FERRAMENTA ===== -->
@@ -1042,7 +1042,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <p class="why">Dos empresas ejecutan la misma cadena con el mismo pedido. En una, el resultado es genérico e inútil. En la otra, parece hecho por alguien de la empresa. La diferencia no es el modelo de IA. Es lo que tenía a mano: documentos, procedimientos, registro de clientes, reglas, historial. Deloitte señala que los datos difíciles de buscar y de reutilizar son uno de los mayores obstáculos para la automatización con agentes. Y la mayor parte de ese contexto probablemente existe en tu empresa. Solo que no está donde un agente pueda acceder.</p>
 <p class="cue"><span class="arw">↓</span> rol para estudiar</p>
 </div>
-<!-- herofig · registro METÁFORA-DO-MUNDO-REAL: arquivo de aço com gavetas etiquetadas; uma gaveta aberta e organizada, outra com papéis soltos, uma pasta ainda na mão de alguém -->
+<!-- herofig · registro METÁFORA-DO-MUNDO-REAL: arquivo de aço com gavetas etiquetadas; uma gaveta aberta e organizada, outra com papéis soltos, uma pasta ainda na mêo de alguém -->
 <div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
 <ellipse cx="130" cy="222" fill="#000" opacity=".25" rx="90" ry="8"></ellipse>
 <rect fill="#1a1824" height="190" rx="6" stroke="#948DA6" stroke-width="2" width="140" x="60" y="30"></rect>
@@ -1071,14 +1071,14 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </section>
 <section class="step" data-fig="2" data-kind="fundamento">
 <h2><span class="n">02</span> El contexto empresarial tiene nueve fuentes, y toda empresa tiene las nueve</h2>
-<p>Cuando el texto base habla de conectar el agente con la empresa, enumera lo que hace que un agente se convierta en un trabajador digital: <b>documentos</b> (contratos, propuestas, informes), <b>procedimientos</b> (cómo hacemos las cosas aquí), el <span class="gterm" data-def="Sistema onde a empresa registra clientes, contatos, propostas e histórico de relacionamento. Gestão de relacionamento com o cliente, em inglês." tabindex="0">CRM</span> (registro e historial de clientes), el <span class="gterm" data-def="Sistema central que registra as operações da empresa: pedidos, estoque, notas, contas a pagar e receber, folha. A sigla vem de gestão integrada de recursos, em inglês." tabindex="0">ERP</span> (pedidos, inventario, facturas, cuentas), <b>correo electrónico</b>, o <span class="gterm" data-def="Onde um sistema guarda suas informações de forma organizada, em tabelas. Todo CRM e todo ERP têm um por baixo." tabindex="0">base de datos</span> (las tablas detrás de los sistemas), <b>métricas</b> (las cifras que sigue la dirección), <b>reglas</b> (límites, niveles de autorización, plazos) y <b>conocimiento interno</b> (lo que solo sabe quien lleva años trabajando allí).</p>
+<p>Cuando el texto base habla de conectar el agente con la empresa, enumera lo que hace que un agente se convierta en un trabajador digital: <b>documentos</b> (contratos, propuestas, informes), <b>procedimientos</b> (cómo hacemos las cosas aquí), el <span class="gterm" data-def="Sistema onde a empresa registra clientes, contatos, propostas e histórico de relacionamento. Gestêo de relacionamento com o cliente, em inglês." tabindex="0">CRM</span> (registro e historial de clientes), el <span class="gterm" data-def="Sistema central que registra as operações da empresa: pedidos, estoque, notas, contas a pagar e receber, folha. A sigla vem de gestêo integrada de recursos, em inglês." tabindex="0">ERP</span> (pedidos, inventario, facturas, cuentas), <b>correo electrónico</b>, o <span class="gterm" data-def="Onde um sistema guarda suas informações de forma organizada, em tabelas. Todo CRM e todo ERP têm um por baixo." tabindex="0">base de datos</span> (las tablas detrás de los sistemas), <b>métricas</b> (las cifras que sigue la dirección), <b>reglas</b> (límites, niveles de autorización, plazos) y <b>conocimiento interno</b> (lo que solo sabe quien lleva años trabajando allí).</p>
 <p>Ningún agente necesita las nueve de una vez. Pero todo proceso que mapees usa al menos cuatro, y la mayoría de las personas solo recuerda dos. La lista existe para que no olvides las demás.</p>
 <!-- ex-prof --><p>Para la reactivación de clientes, la gerente comercial Cláudia marcó: base de clientes (historial de compras), reglas (plazo mínimo y lista de precios), correo electrónico (las últimas conversaciones con cada cliente) y conocimiento interno (el vendedor que atendía la región sabe quién tuvo un conflicto con la empresa en 2022). Cuatro fuentes. Solo la primera estaba en un sistema.</p>
 <div class="quiz" data-answer="c">
 <p class="qk">Ponte a prueba</p><p class="q">Un agente de conciliación recibió los extractos y las facturas y, aun así, clasificó 40 movimientos en una cuenta prohibida. ¿Qué fuente de contexto probablemente faltó?</p>
-<button class="opt" data-fb="Não. Os documentos (extratos e notas) estavam lá; o problema não é o que aconteceu, é como a empresa decide classificar." data-k="a">documentos</button>
-<button class="opt" data-fb="Perto. Métricas dizem como a empresa vai, não como ela classifica. A resposta está em outra fonte." data-k="b">métricas</button>
-<button class="opt" data-fb="Isso. A proibição da conta é uma regra, e como classificamos cada tipo de lançamento é procedimento. Sem essas duas, o agente escolhe o que parece razoável." data-k="c">reglas y procedimientos</button>
+<button class="opt" data-fb="Nêo. Os documentos (extratos e notas) estavam lá; o problema nêo é o que aconteceu, é como a empresa decide classificar." data-k="a">documentos</button>
+<button class="opt" data-fb="Perto. Métricas dizem como a empresa vai, nêo como ela classifica. A resposta está em outra fonte." data-k="b">métricas</button>
+<button class="opt" data-fb="Isso. A proibiçêo da conta é uma regra, e como classificamos cada tipo de lançamento é procedimento. Sem essas duas, o agente escolhe o que parece razoável." data-k="c">reglas y procedimientos</button>
 <p class="qfb"></p>
 </div>
 <div class="mobfig" data-mobfig="2"></div>
@@ -1138,7 +1138,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </div>
 <aside class="rail"><div class="railsticky">
 <div class="figstage">
-<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o mesmo modelo de IA (círculo central) com duas entradas. À esquerda, sem contexto: sai um resultado genérico (caixa cinza pontilhada). À direita, com documentos, regras e histórico entrando por cima: sai um resultado específico (caixa verde). O modelo não mudou." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o mesmo modelo de IA (círculo central) com duas entradas. À esquerda, sem contexto: sai um resultado genérico (caixa cinza pontilhada). À direita, com documentos, regras e histórico entrando por cima: sai um resultado específico (caixa verde). O modelo nêo mudou." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <circle cx="60" cy="90" r="26" stroke="#948DA6" stroke-width="1.5"></circle><text fill="#ECE6D9" font-family="monospace" font-size="8" x="46" y="94">modelo</text>
 <path d="M60 116 v20" stroke="#6C6580" stroke-width="1.2"></path>
 <rect height="24" rx="4" stroke="#6C6580" stroke-dasharray="3 3" stroke-width="1.2" width="72" x="24" y="136"></rect><text fill="#948DA6" font-family="monospace" font-size="7.5" x="34" y="152">genérico</text>
@@ -1151,7 +1151,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <rect fill="#221f2e" height="24" rx="4" stroke="#7CE0C6" stroke-width="1.5" width="72" x="124" y="136"></rect><text fill="#7CE0C6" font-family="monospace" font-size="7.5" x="132" y="152">específico</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="40" y="188">el modelo es el mismo; el contexto no</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; as nove fontes de contexto dispostas em roda em torno do agente. As quatro preenchidas em verde são as que o processo de reativação de clientes usa; as demais existem na empresa e ficam de reserva." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; as nove fontes de contexto dispostas em roda em torno do agente. As quatro preenchidas em verde sêo as que o processo de reativaçêo de clientes usa; as demais existem na empresa e ficam de reserva." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <circle cx="110" cy="100" fill="#221f2e" r="22" stroke="#948DA6" stroke-width="1.5"></circle><text fill="#ECE6D9" font-family="monospace" font-size="8" x="92" y="104">agente</text>
 <g font-family="monospace" font-size="7">
 <rect height="16" rx="3" stroke="#948DA6" stroke-width="1.2" width="56" x="82" y="14"></rect><text fill="#ECE6D9" x="90" y="25">documentos</text>
@@ -1168,7 +1168,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <path d="M110 78 v-48 M128 84 l30 -34 M132 100 h32 M132 106 l32 14 M126 118 l26 32 M110 122 v48 M94 118 l-26 32 M88 108 l-32 12 M88 94 l-32 -10" stroke="#37324a" stroke-width="1"></path>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="60" y="196">verde = usadas en este proceso</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; dois eixos: pesquisável (o agente acha sozinho) e reutilizável (serve ao próximo caso). Só o quadrante superior direito (verde) é contexto pronto. Os outros três são trabalho de uma tarde: escrever, renomear, trocar imagem por texto." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; dois eixos: pesquisável (o agente acha sozinho) e reutilizável (serve ao próximo caso). Só o quadrante superior direito (verde) é contexto pronto. Os outros três sêo trabalho de uma tarde: escrever, renomear, trocar imagem por texto." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <path d="M30 170 h170 M30 170 v-150" stroke="#37324a" stroke-width="1.5"></path>
 <path d="M115 170 v-150 M30 95 h170" stroke="#37324a" stroke-dasharray="3 3" stroke-width="1"></path>
 <text fill="#948DA6" font-family="monospace" font-size="7.5" x="120" y="186">se puede buscar →</text>
@@ -1181,7 +1181,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <path d="M100 56 h14 M100 130 q10 -30 20 -36 M158 100 v-6" fill="none" stroke="#F2B45C" stroke-dasharray="2 2" stroke-width="1.2"></path>
 <text fill="#F2B45C" font-family="monospace" font-size="7" x="132" y="160">ámbar = una tarde de trabajo</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; três caminhos do contexto até o agente, do provisório ao permanente: anexo na conversa (a cada vez), pasta de projeto (uma vez, vale para todas as conversas), conexão direta ao sistema (o agente busca sozinho, montada por tecnologia)." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; três caminhos do contexto até o agente, do provisório ao permanente: anexo na conversa (a cada vez), pasta de projeto (uma vez, vale para todas as conversas), conexêo direta ao sistema (o agente busca sozinho, montada por tecnologia)." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#221f2e" height="60" rx="8" stroke="#948DA6" stroke-width="1.5" width="58" x="150" y="70"></rect><text fill="#ECE6D9" font-family="monospace" font-size="8" x="160" y="104">agente</text>
 <rect height="24" rx="4" stroke="#948DA6" stroke-width="1.2" width="48" x="12" y="24"></rect><text fill="#ECE6D9" font-family="monospace" font-size="7.5" x="20" y="40">archivo adjunto</text>
 <path d="M60 36 h60 l30 40" fill="none" stroke="#948DA6" stroke-dasharray="3 3" stroke-width="1.2"></path>
@@ -1194,7 +1194,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <path d="M150 124 l-8 -2 M150 124 l-2 8" stroke="#F2B45C" stroke-width="1.2"></path>
 <text fill="#6C6580" font-family="monospace" font-size="7" x="66" y="188">3 · el agente busca por su cuenta</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o inventário de contexto como tabela de cinco colunas. As linhas marcadas em âmbar são as que falham em 'onde está' ou 'formato': é o trabalho a fazer antes do agente. A coluna dono nunca fica vazia." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o inventário de contexto como tabela de cinco colunas. As linhas marcadas em âmbar sêo as que falham em 'onde está' ou 'formato': é o trabalho a fazer antes do agente. A coluna dono nunca fica vazia." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="160" rx="6" stroke="#37324a" stroke-width="1.5" width="200" x="10" y="20"></rect>
 <rect fill="#221f2e" height="22" rx="6" width="200" x="10" y="20"></rect>
 <g fill="#948DA6" font-family="monospace" font-size="6.5">
@@ -1242,9 +1242,9 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <script id="cards-5" type="application/json">
 [
   {"front":"O agente de propostas da sua equipe sai genérico mesmo com a tabela de preços anexada. Que fontes de contexto você investiga primeiro?","back":"Procedimentos (como montamos proposta aqui), regras (descontos, prazos) e conhecimento interno (o que o vendedor experiente sabe do cliente). A tabela é só uma das nove fontes."},
-  {"front":"Um procedimento está numa foto de quadro branco no celular do supervisor. Em qual dos dois critérios ele falha, pesquisável ou reutilizável, e qual é a correção?","back":"Falha nos dois: o agente não acha (não pesquisável) e imagem não serve ao próximo caso (não reutilizável). Correção: digitar em texto e salvar na pasta do processo com nome claro. Uma hora de trabalho."},
+  {"front":"Um procedimento está numa foto de quadro branco no celular do supervisor. Em qual dos dois critérios ele falha, pesquisável ou reutilizável, e qual é a correçêo?","back":"Falha nos dois: o agente nêo acha (nêo pesquisável) e imagem nêo serve ao próximo caso (nêo reutilizável). Correçêo: digitar em texto e salvar na pasta do processo com nome claro. Uma hora de trabalho."},
   {"front":"Qual a diferença prática entre entregar o contexto por anexo e por pasta de projeto?","back":"Anexo vale para aquela conversa e precisa ser repetido a cada vez. Pasta de projeto guarda documentos e instruções uma vez, e toda conversa nova do projeto já nasce com eles."},
-  {"front":"No inventário, uma linha ficou sem dono. Por que isso é um problema mesmo que a informação esteja acessível hoje?","back":"Sem uma pessoa responsável, o contexto envelhece sem ninguém notar, e o agente passa a decidir com a tabela do ano passado. Dono é uma pessoa, não um setor."}
+  {"front":"No inventário, uma linha ficou sem dono. Por que isso é um problema mesmo que a informaçêo esteja acessível hoje?","back":"Sem uma pessoa responsável, o contexto envelhece sem ninguém notar, e o agente passa a decidir com a tabela do ano passado. Dono é uma pessoa, nêo um setor."}
 ]
 </script>
 <!-- COMPLETUDE aula-5 | tipo=FERRAMENTA | steps=5
@@ -1258,10 +1258,10 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
   [OK] pgoal-tempo        .pgoal com tempo declarado (~12 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-5"> presente (4 cartões opcionais: aplicação, diagnóstico, contraste, pergunta)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
-  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigação não se aplica); teste-se opcional presente (1 pergunta, step 02)
-  dosagem: pool = qerr (step 03) + qsteps (step 05) obrigatórios + quiz opcional + cartões opcionais = 4 (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. data-versao nos steps 04 e 05 (ferramenta). rampa de acesso antes da conexão direta (step 04).
+  [OK] cards              <script id="cards-5"> presente (4 cartões opcionais: aplicaçêo, diagnóstico, contraste, pergunta)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
+  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigaçêo nêo se aplica); teste-se opcional presente (1 pergunta, step 02)
+  dosagem: pool = qerr (step 03) + qsteps (step 05) obrigatórios + quiz opcional + cartões opcionais = 4 (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. data-versao nos steps 04 e 05 (ferramenta). rampa de acesso antes da conexêo direta (step 04).
 -->
 </section>
 <!-- ===== AULA 6 · FUNDAMENTO ===== -->
@@ -1274,7 +1274,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <p class="why">Cuando la IA solo respondía, un error costaba volver a leer. Cuando actúa, se convierte en una propuesta enviada con un precio incorrecto o en un movimiento registrado en una cuenta prohibida. Microsoft mostró que los profesionales más avanzados dan mucha más importancia a los estándares de calidad, la documentación y la evaluación de resultados que los principiantes. Eso es lo que distingue a quienes tienen agentes en funcionamiento de quienes los apagaron después del primer susto. Evaluar y supervisar es la quinta competencia del curso y la que más va a crecer.</p>
 <p class="cue"><span class="arw">↓</span> rol para estudiar</p>
 </div>
-<!-- herofig · registro METÁFORA-DO-MUNDO-REAL: prancheta de inspeção de qualidade, com lista de verificação, caneta e carimbo de aprovado/reprovado, numa bancada -->
+<!-- herofig · registro METÁFORA-DO-MUNDO-REAL: prancheta de inspeçêo de qualidade, com lista de verificaçêo, caneta e carimbo de aprovado/reprovado, numa bancada -->
 <div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
 <ellipse cx="150" cy="222" fill="#000" opacity=".25" rx="110" ry="8"></ellipse>
 <rect fill="#221f2e" height="18" rx="3" stroke="#948DA6" stroke-width="2" width="240" x="30" y="200"></rect>
@@ -1335,9 +1335,9 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <!-- ex-prof --><p>La analista financiera Fernanda definió que el agente se detenga y registre cada factura sin una orden correspondiente y cada divergencia superior al 2%. Solo la llama de inmediato en dos casos: una divergencia superior a 5 mil reales o más de 20 facturas detenidas el mismo día, lo que indica un problema en el archivo, no en las facturas. Para lo demás, ella revisa la lista por la mañana. Pasó de recibir más de 30 interrupciones al día a una o dos por semana.</p>
 <div class="quiz" data-answer="b">
 <p class="qk">Ponte a prueba</p><p class="q">Un agente de propuestas encontró 3 clientes con datos de registro incompletos entre 30. Según la lógica de esta clase, ¿qué debe hacer?</p>
-<button class="opt" data-fb="Não. Chamar a pessoa por 3 casos entre 30, num problema comum, é o agente que interrompe vinte vezes por dia. Parar não é o mesmo que chamar." data-k="a">detener todo y llamar a la gerente de inmediato</button>
-<button class="opt" data-fb="Isso. Parar nesses 3 (falta informação para decidir), registrar o motivo e seguir com os 27. A gerente vê a lista na revisão. Chamar na hora seria só se um limite combinado fosse atingido, como 20 casos parados." data-k="b">separar los 3 con el motivo, seguir con los 27 y dejarlo para la revisión</button>
-<button class="opt" data-fb="Não. Preencher o que falta é supor, e supor é o que a aula 3 pediu para o agente nunca fazer sem perguntar." data-k="c">completar el registro con lo que parezca más probable y seguir</button>
+<button class="opt" data-fb="Nêo. Chamar a pessoa por 3 casos entre 30, num problema comum, é o agente que interrompe vinte vezes por dia. Parar nêo é o mesmo que chamar." data-k="a">detener todo y llamar a la gerente de inmediato</button>
+<button class="opt" data-fb="Isso. Parar nesses 3 (falta informaçêo para decidir), registrar o motivo e seguir com os 27. A gerente vê a lista na revisêo. Chamar na hora seria só se um limite combinado fosse atingido, como 20 casos parados." data-k="b">separar los 3 con el motivo, seguir con los 27 y dejarlo para la revisión</button>
+<button class="opt" data-fb="Nêo. Preencher o que falta é supor, e supor é o que a aula 3 pediu para o agente nunca fazer sem perguntar." data-k="c">completar el registro con lo que parezca más probable y seguir</button>
 <p class="qfb"></p>
 </div>
 <div class="mobfig" data-mobfig="4"></div>
@@ -1369,7 +1369,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </div>
 <aside class="rail"><div class="railsticky">
 <div class="figstage">
-<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; em cima, a pergunta 'funcionou?' aponta para uma única caixa vazia: não tem resposta conferível. Embaixo, as cinco partes da ficha de qualidade, cada uma com um espaço a preencher por escrito antes de o agente tocar algo real." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; em cima, a pergunta 'funcionou?' aponta para uma única caixa vazia: nêo tem resposta conferível. Embaixo, as cinco partes da ficha de qualidade, cada uma com um espaço a preencher por escrito antes de o agente tocar algo real." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <text fill="#948DA6" font-family="monospace" font-size="9" x="12" y="22">"¿funcionó?"</text>
 <rect height="22" rx="4" stroke="#6C6580" stroke-dasharray="3 3" stroke-width="1.2" width="196" x="12" y="30"></rect>
 <text fill="#6C6580" font-family="monospace" font-size="8" x="84" y="45">?</text>
@@ -1383,7 +1383,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </g>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="196">por escrito, antes de tocar algo real</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; três resultados bons e dois ruins passam por uma peneira. O que os bons têm em comum e os ruins não (à direita) vira condição observável. Os cinco exemplos ficam guardados: são a primeira bateria de teste." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; três resultados bons e dois ruins passam por uma peneira. O que os bons têm em comum e os ruins nêo (à direita) vira condiçêo observável. Os cinco exemplos ficam guardados: sêo a primeira bateria de teste." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect height="34" rx="3" stroke="#7CE0C6" stroke-width="1.5" width="26" x="12" y="20"></rect><rect height="34" rx="3" stroke="#7CE0C6" stroke-width="1.5" width="26" x="44" y="20"></rect><rect height="34" rx="3" stroke="#7CE0C6" stroke-width="1.5" width="26" x="76" y="20"></rect>
 <rect height="34" rx="3" stroke="#6C6580" stroke-dasharray="3 3" stroke-width="1.5" width="26" x="108" y="20"></rect><rect height="34" rx="3" stroke="#6C6580" stroke-dasharray="3 3" stroke-width="1.5" width="26" x="140" y="20"></rect>
 <text fill="#7CE0C6" font-family="monospace" font-size="7.5" x="14" y="66">3 buenos</text><text fill="#6C6580" font-family="monospace" font-size="7.5" x="112" y="66">2 malos</text>
@@ -1397,7 +1397,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </g>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="192">condiciones, no adjetivos</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a régua de tolerância em três faixas. Tolerável (cinza): o agente segue e registra. Bloqueante (âmbar): para e mostra ao humano. Proibido (vermelho suave): o agente nem tem permissão para alcançar. Cada condição da ficha cai numa faixa." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a régua de tolerância em três faixas. Tolerável (cinza): o agente segue e registra. Bloqueante (âmbar): para e mostra ao humano. Proibido (vermelho suave): o agente nem tem permissêo para alcançar. Cada condiçêo da ficha cai numa faixa." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#948DA6" height="30" opacity=".55" rx="4" width="60" x="20" y="60"></rect>
 <rect fill="#F2B45C" height="30" opacity=".85" rx="0" width="70" x="80" y="60"></rect>
 <rect fill="#E0736F" height="30" opacity=".85" rx="4" width="50" x="150" y="60"></rect>
@@ -1417,7 +1417,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 </g>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="14" y="190">prohibido = tema de la clase 7</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; parar e chamar como dois portões em série. Muitas execuções passam pelo primeiro portão (parar: registra na lista da revisão). Só poucas passam pelo segundo (chamar: acorda a pessoa agora). Os dois extremos ruins aparecem embaixo." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; parar e chamar como dois portões em série. Muitas execuções passam pelo primeiro portêo (parar: registra na lista da revisêo). Só poucas passam pelo segundo (chamar: acorda a pessoa agora). Os dois extremos ruins aparecem embaixo." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <path d="M14 50 h40" stroke="#948DA6" stroke-width="2"></path>
 <rect fill="#948DA6" height="40" rx="3" width="14" x="54" y="30"></rect><text fill="#948DA6" font-family="monospace" font-size="8" x="46" y="24">¿detenerse?</text>
 <path d="M68 50 h50" stroke="#948DA6" stroke-width="2"></path>
@@ -1431,7 +1431,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="14" y="158">nunca llama → error descubierto tarde</text>
 <text fill="#7CE0C6" font-family="monospace" font-size="7.5" x="14" y="184">pocas llamadas, todas valiosas</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a bateria de 15 casos como uma grade. Verde: atendeu todas as condições. Âmbar: parou corretamente. Vermelho suave: errou. Os três últimos são os difíceis, de propósito. A grade se roda de novo a cada mudança de instrução." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a bateria de 15 casos como uma grade. Verde: atendeu todas as condições. Âmbar: parou corretamente. Vermelho suave: errou. Os três últimos sêo os difíceis, de propósito. A grade se roda de novo a cada mudança de instruçêo." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <text fill="#948DA6" font-family="monospace" font-size="8.5" x="14" y="22">batería: 15 casos</text>
 <g>
 <rect fill="#7CE0C6" height="34" opacity=".85" rx="4" width="34" x="14" y="34"></rect><rect fill="#7CE0C6" height="34" opacity=".85" rx="4" width="34" x="52" y="34"></rect><rect fill="#7CE0C6" height="34" opacity=".85" rx="4" width="34" x="90" y="34"></rect><rect fill="#7CE0C6" height="34" opacity=".85" rx="4" width="34" x="128" y="34"></rect><rect fill="#7CE0C6" height="34" opacity=".85" rx="4" width="34" x="166" y="34"></rect>
@@ -1472,11 +1472,11 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <footer>Clase 6 · Arquitecto de Trabajo con IA · INEMA.CLUB PRO</footer>
 <script id="cards-6" type="application/json">
 [
-  {"front":"Sua ficha diz que a proposta precisa ser 'profissional e completa'. Por que isso não serve, e como você reescreveria?","back":"Adjetivos não se conferem. Reescrever como condições observáveis: 'cita o último produto comprado, tem até 6 linhas, usa preço da tabela vigente, termina com uma pergunta'. Qualquer verificador confere isso."},
-  {"front":"O agente de fechamento parou 40 vezes num dia por descrições abreviadas fora do padrão. Que faixa da régua está mal classificada e o que muda?","back":"Abreviação fora do padrão é erro cosmético: tolerável, não bloqueante. Reclassificar faz o agente registrar e seguir, e parar só no que muda o resultado, como lançamento em conta errada."},
-  {"front":"Um agente atingiu o limite de 50 clientes processados. Ele deve parar, chamar você, ou ambos? Justifique.","back":"Parar, sim: é um limite combinado. Chamar depende: se o limite indica algo anormal (nunca passa de 30), chama; se é só o teto diário normal, registra e a revisão vê depois. Interromper a execução e acordar alguém são duas decisões independentes."},
-  {"front":"A bateria de teste do seu agente tem 15 casos e ele acertou os 15. O que você suspeita antes de aprovar?","back":"Que a bateria não tem casos difíceis. Sem a exceção, o duplicado e o caso que deu errado no passado, acertar 15 fáceis não prova nada. Acrescente 3 difíceis e rode de novo."},
-  {"front":"Você melhorou uma instrução do agente de propostas para ele escrever mais curto. O que precisa acontecer antes de essa mudança ir para uso real?","back":"Rodar a bateria inteira de novo. É o que impede uma melhoria de um lado (mais curto) virar um erro do outro (deixou de citar o último produto comprado)."}
+  {"front":"Sua ficha diz que a proposta precisa ser 'profissional e completa'. Por que isso nêo serve, e como você reescreveria?","back":"Adjetivos nêo se conferem. Reescrever como condições observáveis: 'cita o último produto comprado, tem até 6 linhas, usa preço da tabela vigente, termina com uma pergunta'. Qualquer verificador confere isso."},
+  {"front":"O agente de fechamento parou 40 vezes num dia por descrições abreviadas fora do padrêo. Que faixa da régua está mal classificada e o que muda?","back":"Abreviaçêo fora do padrêo é erro cosmético: tolerável, nêo bloqueante. Reclassificar faz o agente registrar e seguir, e parar só no que muda o resultado, como lançamento em conta errada."},
+  {"front":"Um agente atingiu o limite de 50 clientes processados. Ele deve parar, chamar você, ou ambos? Justifique.","back":"Parar, sim: é um limite combinado. Chamar depende: se o limite indica algo anormal (nunca passa de 30), chama; se é só o teto diário normal, registra e a revisêo vê depois. Interromper a execuçêo e acordar alguém sêo duas decisões independentes."},
+  {"front":"A bateria de teste do seu agente tem 15 casos e ele acertou os 15. O que você suspeita antes de aprovar?","back":"Que a bateria nêo tem casos difíceis. Sem a exceçêo, o duplicado e o caso que deu errado no passado, acertar 15 fáceis nêo prova nada. Acrescente 3 difíceis e rode de novo."},
+  {"front":"Você melhorou uma instruçêo do agente de propostas para ele escrever mais curto. O que precisa acontecer antes de essa mudança ir para uso real?","back":"Rodar a bateria inteira de novo. É o que impede uma melhoria de um lado (mais curto) virar um erro do outro (deixou de citar o último produto comprado)."}
 ]
 </script>
 <!-- COMPLETUDE aula-6 | tipo=FUNDAMENTO | steps=5
@@ -1490,10 +1490,10 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
   [OK] pgoal-tempo        .pgoal com tempo declarado (~15 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-6"> presente (5 cartões: aplicação, diagnóstico, decisão, diagnóstico, aplicação)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
+  [OK] cards              <script id="cards-6"> presente (5 cartões: aplicaçêo, diagnóstico, decisêo, diagnóstico, aplicaçêo)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
   [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz data-fb, step 04)
-  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. vermelho suave (#E0736F) usado só para "proibido/errou", âmbar nunca significa resposta errada (DV-4).
+  dosagem: pool = quiz + cartões + qbefore-after (step 03) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. vermelho suave (#E0736F) usado só para "proibido/errou", âmbar nunca significa resposta errada (DV-4).
 -->
 </section>
 <!-- ===== AULA 7 · FUNDAMENTO ===== -->
@@ -1568,9 +1568,9 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <!-- ex-prof --><p>La analista financiera Fernanda es responsable de tres permisos del agente de revisión: leer facturas y órdenes, escribir la lista de divergencias, cambiar el estado de la factura a "revisada". Su gerente es responsable de uno: aprobar el pago de las facturas revisadas, algo que el agente no puede hacer, solo preparar. Cuando la auditoría preguntó por qué se pagó la factura 4412, Fernanda abrió el registro: revisada por el agente a las 8h12, el monto coincidía con la orden 887, aprobada por el gerente a las 10h30.</p>
 <div class="quiz" data-answer="a">
 <p class="qk">Ponte a prueba</p><p class="q">Un agente de atención al cliente tiene permiso para «cambiar la dirección de entrega, con aprobación». Un cliente solicita el cambio a las 22h. ¿Qué sucede?</p>
-<button class="opt" data-fb="Exato. 'Com aprovação' significa que o agente prepara a alteração, registra e espera uma pessoa liberar. O cliente é avisado de que o pedido foi recebido e será confirmado. Ninguém acorda às 22h, e nada muda sem aprovação." data-k="a">el agente prepara el cambio, lo registra, avisa al cliente que se confirmará y espera la aprobación por la mañana</button>
-<button class="opt" data-fb="Não. 'Com aprovação' não vira 'pode' fora do horário. Se a empresa quiser alteração imediata à noite, muda a matriz de propósito, não por exceção improvisada." data-k="b">el agente hace el cambio, porque por la noche no hay quien lo apruebe y el cliente no puede esperar</button>
-<button class="opt" data-fb="Não. Recusar seria tratar 'com aprovação' como 'não pode'. O agente pode preparar; só não pode concluir sozinho." data-k="c">el agente rechaza el cambio y pide al cliente que llame al día siguiente</button>
+<button class="opt" data-fb="Exato. 'Com aprovaçêo' significa que o agente prepara a alteraçêo, registra e espera uma pessoa liberar. O cliente é avisado de que o pedido foi recebido e será confirmado. Ninguém acorda às 22h, e nada muda sem aprovaçêo." data-k="a">el agente prepara el cambio, lo registra, avisa al cliente que se confirmará y espera la aprobación por la mañana</button>
+<button class="opt" data-fb="Nêo. 'Com aprovaçêo' nêo vira 'pode' fora do horário. Se a empresa quiser alteraçêo imediata à noite, muda a matriz de propósito, nêo por exceçêo improvisada." data-k="b">el agente hace el cambio, porque por la noche no hay quien lo apruebe y el cliente no puede esperar</button>
+<button class="opt" data-fb="Nêo. Recusar seria tratar 'com aprovaçêo' como 'nêo pode'. O agente pode preparar; só nêo pode concluir sozinho." data-k="c">el agente rechaza el cambio y pide al cliente que llame al día siguiente</button>
 <p class="qfb"></p>
 </div>
 <div class="mobfig" data-mobfig="4"></div>
@@ -1585,7 +1585,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <div class="mobfig" data-mobfig="5"></div>
 <button class="readbtn" data-read="s5">marcar como leído</button>
 </section>
-<!-- modo analise justificado (RETENCAO-V5 §5): conceder permissão real a um agente é a única ação deste curso com consequência que não se desfaz; a prática se faz sobre um caso, e a matriz do aluno é preenchida no fim, em papel. -->
+<!-- modo analise justificado (RETENCAO-V5 §5): conceder permissêo real a um agente é a única açêo deste curso com consequência que nêo se desfaz; a prática se faz sobre um caso, e a matriz do aluno é preenchida no fim, em papel. -->
 <section class="practice" data-mode="analise" data-practice="p7">
 <p class="pk">Practica ahora <span class="pcount">0/4 hecho</span></p>
 <h3 class="ph">El caso de la distribuidora Norte: decide los permisos y luego completa los tuyos</h3>
@@ -1623,7 +1623,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <circle cx="196" cy="143" r="10" stroke="#7CE0C6" stroke-width="1.5"></circle><text fill="#7CE0C6" font-family="monospace" font-size="9" x="192" y="147">H</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="14" y="180">correo electrónico enviado, pago realizado,</text><text fill="#6C6580" font-family="monospace" font-size="7.5" x="14" y="192">registro borrado: se descubre después</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a matriz de permissões: sete ações em ordem de risco crescente (de ler a aprovar) e três respostas possíveis. O preenchimento típico da primeira versão de um agente forma uma escada: pode em cima, com aprovação no meio, não pode embaixo." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a matriz de permissões: sete ações em ordem de risco crescente (de ler a aprovar) e três respostas possíveis. O preenchimento típico da primeira versêo de um agente forma uma escada: pode em cima, com aprovaçêo no meio, nêo pode embaixo." data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <g fill="#948DA6" font-family="monospace" font-size="7">
 <text x="100" y="20">puede</text><text x="134" y="20">con aprob.</text><text x="182" y="20">no</text>
 </g>
@@ -1642,7 +1642,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <text fill="#6C6580" font-family="monospace" font-size="6.5" transform="rotate(90 68 110)" x="64" y="110">el riesgo crece</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="194">1.ª versión: escalera</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o filtro de dados sensíveis. Cada dado passa pela pergunta 'o trabalho sai igual sem isso?'. Os que respondem sim (histórico, razão social) entram no alcance do agente. Os que respondem não (documentos, dados bancários, saúde) ficam do lado de fora, mesmo que o fornecedor seja confiável." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o filtro de dados sensíveis. Cada dado passa pela pergunta 'o trabalho sai igual sem isso?'. Os que respondem sim (histórico, razêo social) entram no alcance do agente. Os que respondem nêo (documentos, dados bancários, saúde) ficam do lado de fora, mesmo que o fornecedor seja confiável." data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <g fill="#ECE6D9" font-family="monospace" font-size="7">
 <rect height="14" rx="2" stroke="#948DA6" stroke-width="1" width="60" x="12" y="20"></rect><text x="16" y="30">historial</text>
 <rect height="14" rx="2" stroke="#948DA6" stroke-width="1" width="60" x="12" y="40"></rect><text x="16" y="50">razón social</text>
@@ -1661,7 +1661,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="150">no es "el proveedor</text><text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="162">¿es confiable?»</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="190">es «¿lo necesita para el trabajo?»</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; cada linha da matriz tem três colunas a mais: o dono (uma pessoa com nome), o registro (o que o agente fez, quando, com base em quê) e a revisão. Uma linha sem dono é uma permissão que ninguém olha, e cresce sozinha." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; cada linha da matriz tem três colunas a mais: o dono (uma pessoa com nome), o registro (o que o agente fez, quando, com base em quê) e a revisêo. Uma linha sem dono é uma permissêo que ninguém olha, e cresce sozinha." data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <g fill="#948DA6" font-family="monospace" font-size="6.5">
 <text x="12" y="24">acción</text><text x="70" y="24">respuesta</text><text x="124" y="24">dueño</text><text x="170" y="24">registro</text>
 </g>
@@ -1677,7 +1677,7 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <text fill="#E0736F" font-family="monospace" font-size="7.5" x="12" y="168">línea sin responsable: nadie la revisa</text>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="12" y="190">"¿por qué recibí esto?" → registro, 1 min</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a escada de permissões ao longo dos meses. Cada degrau só é subido depois de a bateria de casos passar de novo e um mês de registro limpo. O último degrau, fechar o mês sozinho, talvez nunca seja subido, e a linha pontilhada mostra que isso é uma escolha, não uma falha." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; a escada de permissões ao longo dos meses. Cada degrau só é subido depois de a bateria de casos passar de novo e um mês de registro limpo. O último degrau, fechar o mês sozinho, talvez nunca seja subido, e a linha pontilhada mostra que isso é uma escolha, nêo uma falha." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <path d="M14 180 h190" stroke="#37324a" stroke-width="1.5"></path>
 <g fill="#948DA6" font-family="monospace" font-size="7">
 <text x="18" y="194">mes 1</text><text x="62" y="194">mes 2</text><text x="106" y="194">mes 4</text><text x="150" y="194">mes 6</text>
@@ -1719,11 +1719,11 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <footer>Clase 7 · Arquitecto de Trabajo con IA · INEMA.CLUB PRO</footer>
 <script id="cards-7" type="application/json">
 [
-  {"front":"Um colega diz: 'o fornecedor do serviço de IA tem contrato de confidencialidade, então o agente pode ver os dados bancários dos clientes'. O que está errado no raciocínio?","back":"A pergunta não é se o fornecedor é confiável, é se o serviço fica igual sem aquele dado. Para reativar clientes, dados bancários não são necessários: ficam fora do alcance, com ou sem contrato."},
-  {"front":"O agente de propostas está indo bem há 6 semanas e a equipe quer liberar envio direto, desconto e alteração de cadastro de uma vez. O que você propõe?","back":"Um degrau por vez: liberar uma permissão, rodar a bateria de casos de novo, um mês de registro limpo, e só então a próxima. Desconto (gastar margem) provavelmente continua 'não pode'."},
-  {"front":"Qual a diferença entre 'com aprovação' e 'não pode' para a ação de enviar e-mail?","back":"'Com aprovação': o agente prepara, registra e uma pessoa libera; a ferramenta existe. 'Não pode': a ferramenta de envio nem está disponível para ele. A primeira é o normal para enviar na primeira versão; a segunda, para apagar e aprovar."},
-  {"front":"Um cliente pergunta por que recebeu uma abordagem que não fazia sentido. A resposta da equipe foi 'foi a IA'. O que faltou na governança?","back":"Registro guardado e dono da permissão. Com os dois, a pessoa dona abre o registro (o que o agente fez, quando, com base em quê) e responde em um minuto. 'Foi a IA' é o sintoma de permissão sem dono."},
-  {"front":"Na matriz do seu agente, sete ações ficaram em 'pode'. O que isso indica?","back":"Que a matriz está mais frouxa do que a que você daria a um funcionário no primeiro dia. Comprar, apagar e aprovar quase nunca são 'pode' na primeira versão. Releia cada linha perguntando se um estagiário novo teria essa permissão."}
+  {"front":"Um colega diz: 'o fornecedor do serviço de IA tem contrato de confidencialidade, entêo o agente pode ver os dados bancários dos clientes'. O que está errado no raciocínio?","back":"A pergunta nêo é se o fornecedor é confiável, é se o serviço fica igual sem aquele dado. Para reativar clientes, dados bancários nêo sêo necessários: ficam fora do alcance, com ou sem contrato."},
+  {"front":"O agente de propostas está indo bem há 6 semanas e a equipe quer liberar envio direto, desconto e alteraçêo de cadastro de uma vez. O que você propõe?","back":"Um degrau por vez: liberar uma permissêo, rodar a bateria de casos de novo, um mês de registro limpo, e só entêo a próxima. Desconto (gastar margem) provavelmente continua 'nêo pode'."},
+  {"front":"Qual a diferença entre 'com aprovaçêo' e 'nêo pode' para a açêo de enviar e-mail?","back":"'Com aprovaçêo': o agente prepara, registra e uma pessoa libera; a ferramenta existe. 'Nêo pode': a ferramenta de envio nem está disponível para ele. A primeira é o normal para enviar na primeira versêo; a segunda, para apagar e aprovar."},
+  {"front":"Um cliente pergunta por que recebeu uma abordagem que nêo fazia sentido. A resposta da equipe foi 'foi a IA'. O que faltou na governança?","back":"Registro guardado e dono da permissêo. Com os dois, a pessoa dona abre o registro (o que o agente fez, quando, com base em quê) e responde em um minuto. 'Foi a IA' é o sintoma de permissêo sem dono."},
+  {"front":"Na matriz do seu agente, sete ações ficaram em 'pode'. O que isso indica?","back":"Que a matriz está mais frouxa do que a que você daria a um funcionário no primeiro dia. Comprar, apagar e aprovar quase nunca sêo 'pode' na primeira versêo. Releia cada linha perguntando se um estagiário novo teria essa permissêo."}
 ]
 </script>
 <!-- COMPLETUDE aula-7 | tipo=FUNDAMENTO | steps=5
@@ -1732,18 +1732,18 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
   [OK] tempo              data-tempo="23min" no view + render no cold-open (1)
   [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (5/5: contador, gerente comercial, advogado, analista financeira, contador)
   [OK] apoio-visual       figura conceitual legendada em 100% dos steps (5/5, data-fig 1..5)
-  [OK] practice           .practice[data-mode="analise"] (exatamente 1; modo justificado: permissão real é a única ação com consequência irreversível do curso)
+  [OK] practice           .practice[data-mode="analise"] (exatamente 1; modo justificado: permissêo real é a única açêo com consequência irreversível do curso)
   [OK] psafe              .psafe dentro da prática (1)
   [OK] pgoal-tempo        .pgoal com tempo declarado (~12 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-7"> presente (5 cartões: diagnóstico, decisão, contraste, diagnóstico, diagnóstico)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
+  [OK] cards              <script id="cards-7"> presente (5 cartões: diagnóstico, decisêo, contraste, diagnóstico, diagnóstico)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
   [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz data-fb, step 04)
-  dosagem: pool = quiz + cartões + qbefore-after (step 02) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. vermelho suave só para "não pode/fora do alcance"; âmbar = atenção/com aprovação (DV-4).
+  dosagem: pool = quiz + cartões + qbefore-after (step 02) + qanchor (step 05) = 4 obrigatórios, 0 opcionais (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. vermelho suave só para "nêo pode/fora do alcance"; âmbar = atençêo/com aprovaçêo (DV-4).
 -->
 </section>
-<!-- ===== AULA 8 · PRÁTICA/INTEGRAÇÃO ===== -->
+<!-- ===== AULA 8 · PRÁTICA/INTEGRAÇêO ===== -->
 <section class="view" data-aula="8" data-tempo="24min" id="v-aula-8">
 <header class="hero"><div class="hero-inner">
 <div>
@@ -1841,17 +1841,17 @@ Se faltar informação para decidir algo, pergunte antes de supor.</pre></div>
 <h3 class="ph">Arma la especificación y haz el ensayo simulado</h3>
 <p class="pgoal">En unos 15 minutos, condensar las siete hojas en una página, pegarla en el chat de IA con el pedido de abajo, ejecutar un caso ficticio de la batería y recibir la lista de vacíos de tu especificación.</p>
 <p class="psafe">La especificación no contiene datos de clientes: contiene reglas, nombres de sistemas y criterios. El caso incluye nombres, documentos y montos ficticios. No se construye ningún agente ni se toca ningún sistema: el chat solo interpreta un papel. Si la simulación inventa un permiso que no diste, es un hallazgo, no un error tuyo: anótalo y ajusta la matriz.</p>
-<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Vou colar a especificação de um agente para um processo da minha empresa. Faça o papel do AGENTE COORDENADOR num ensaio simulado. Regras:
+<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Vou colar a especificaçêo de um agente para um processo da minha empresa. Faça o papel do AGENTE COORDENADOR num ensaio simulado. Regras:
 
-1. Siga a cadeia (coordenador, especialistas, verificação) e narre cada passo em uma linha: quem fez, o que fez, com base em qual regra da especificação.
-2. Respeite a matriz de permissões à letra. Ação "com aprovação": pare e me peça aprovação. Ação "não pode": diga que não pode e siga.
-3. Aplique a ficha de qualidade: para cada condição, diga se o caso atendeu e em que faixa caiu qualquer erro.
-4. Se faltar informação, NÃO suponha. Pare e pergunte, dizendo qual bloco da especificação deveria ter a resposta.
-5. Ao final, liste em até 8 itens o que FALTOU na especificação para você decidir sozinho, por ordem de importância.
+1. Siga a cadeia (coordenador, especialistas, verificaçêo) e narre cada passo em uma linha: quem fez, o que fez, com base em qual regra da especificaçêo.
+2. Respeite a matriz de permissões à letra. Açêo "com aprovaçêo": pare e me peça aprovaçêo. Açêo "nêo pode": diga que nêo pode e siga.
+3. Aplique a ficha de qualidade: para cada condiçêo, diga se o caso atendeu e em que faixa caiu qualquer erro.
+4. Se faltar informaçêo, NêO suponha. Pare e pergunte, dizendo qual bloco da especificaçêo deveria ter a resposta.
+5. Ao final, liste em até 8 itens o que FALTOU na especificaçêo para você decidir sozinho, por ordem de importância.
 
-Os dados do caso são fictícios. Não envie nem registre nada de verdade.
+Os dados do caso sêo fictícios. Nêo envie nem registre nada de verdade.
 
-=== ESPECIFICAÇÃO ===
+=== ESPECIFICAÇêO ===
 &lt;cole aqui a sua página: processo e resultado, mapa, pedido, cadeia, inventário, ficha de qualidade, matriz de permissões&gt;
 
 === CASO DA BATERIA (fictício) ===
@@ -1869,7 +1869,7 @@ Comece narrando o passo 1 do coordenador.</pre></div>
 </div>
 <aside class="rail"><div class="railsticky">
 <div class="figstage">
-<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; duas colunas do que a especificação exige. À esquerda, o que só quem conhece o negócio sabe (processo, regra × julgamento, qualidade, permissões): quase tudo. À direita, o que exige tecnologia (construir a conexão): uma linha. A proporção é o argumento." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; duas colunas do que a especificaçêo exige. À esquerda, o que só quem conhece o negócio sabe (processo, regra × julgamento, qualidade, permissões): quase tudo. À direita, o que exige tecnologia (construir a conexêo): uma linha. A proporçêo é o argumento." data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#221f2e" height="160" rx="8" stroke="#7CE0C6" stroke-width="1.5" width="120" x="12" y="20"></rect>
 <text fill="#7CE0C6" font-family="monospace" font-size="8" x="20" y="38">conoce el negocio</text>
 <g fill="#ECE6D9" font-family="monospace" font-size="7.5">
@@ -1947,7 +1947,7 @@ Comece narrando o passo 1 do coordenador.</pre></div>
 </g>
 <text fill="#6C6580" font-family="monospace" font-size="7.5" x="104" y="186">1 página · 8 min de lectura</text>
 </svg></div>
-<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o ciclo do ensaio simulado: a especificação e um caso fictício entram no chat; o chat interpreta o coordenador e devolve a narração e a lista de lacunas (âmbar); as lacunas viram linhas novas na especificação, e o ciclo roda de novo com três casos até os três passarem." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; o ciclo do ensaio simulado: a especificaçêo e um caso fictício entram no chat; o chat interpreta o coordenador e devolve a narraçêo e a lista de lacunas (âmbar); as lacunas viram linhas novas na especificaçêo, e o ciclo roda de novo com três casos até os três passarem." data-fig="5"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
 <rect fill="#221f2e" height="60" rx="6" stroke="#7CE0C6" stroke-width="1.5" width="60" x="14" y="70"></rect>
 <text fill="#7CE0C6" font-family="monospace" font-size="7.5" x="20" y="96">especif.</text><text fill="#948DA6" font-family="monospace" font-size="7" x="20" y="110">+ caso ficticio</text>
 <path d="M74 90 h40" stroke="#948DA6" stroke-width="1.5"></path><path d="M110 87 l4 3 -4 3" fill="none" stroke="#948DA6" stroke-width="1.5"></path>
@@ -1987,12 +1987,12 @@ Comece narrando o passo 1 do coordenador.</pre></div>
 </div>
 <nav class="lnav"><a href="#aula-7">← clase 7</a><a href="#trilha">completar la ruta →</a></nav>
 <footer>Clase 8 · Arquitecto de Trabajo con IA · INEMA.CLUB PRO</footer>
-<!-- aula PRÁTICA/INTEGRAÇÃO: a matriz de dosagem não pede cartões novos ("só revisão dos existentes"); o script cards-8 existe porque o manifesto exige, com 3 cartões de APLICAÇÃO que integram a trilha inteira, decisão registrada aqui de propósito. -->
+<!-- aula PRÁTICA/INTEGRAÇêO: a matriz de dosagem nêo pede cartões novos ("só revisêo dos existentes"); o script cards-8 existe porque o manifesto exige, com 3 cartões de APLICAÇêO que integram a trilha inteira, decisêo registrada aqui de propósito. -->
 <script id="cards-8" type="application/json">
 [
-  {"front":"A diretoria pede 'um chatbot para cada departamento até dezembro'. Com o que você aprendeu, o que você propõe no lugar, e com que argumento?","back":"Dez processos críticos redesenhados, escolhidos por três perguntas (repete toda semana? +2 pessoas ou +10 etapas? erro custa dinheiro ou cliente?), começando pelo que tem mais contexto pronto. Argumento: chatbot não muda quem faz o quê; processo redesenhado muda."},
-  {"front":"No ensaio simulado, o chat executou o caso inteiro sem parar nenhuma vez e sem perguntar nada. O que isso diz sobre a sua especificação, e em que blocos você mexe?","back":"Que a matriz de permissões ou a ficha de qualidade estão frouxas: nenhum caso real passa sem um ponto de aprovação ou uma dúvida. Revisar o bloco 7 (alguma ação 'com aprovação' virou 'pode'?) e o bloco 6 (as condições de parar existem?)."},
-  {"front":"Um programador diz que consegue construir o agente do seu processo em duas semanas, sem a sua especificação, 'só olhando o sistema'. O que ele vai errar, e por quê?","back":"Regra × julgamento, faixas de tolerância, quando parar e chamar, o que é dado sensível para esse processo, e o que ninguém daria a um funcionário novo. Nada disso está no sistema; está em quem conhece o negócio."}
+  {"front":"A diretoria pede 'um chatbot para cada departamento até dezembro'. Com o que você aprendeu, o que você propõe no lugar, e com que argumento?","back":"Dez processos críticos redesenhados, escolhidos por três perguntas (repete toda semana? +2 pessoas ou +10 etapas? erro custa dinheiro ou cliente?), começando pelo que tem mais contexto pronto. Argumento: chatbot nêo muda quem faz o quê; processo redesenhado muda."},
+  {"front":"No ensaio simulado, o chat executou o caso inteiro sem parar nenhuma vez e sem perguntar nada. O que isso diz sobre a sua especificaçêo, e em que blocos você mexe?","back":"Que a matriz de permissões ou a ficha de qualidade estêo frouxas: nenhum caso real passa sem um ponto de aprovaçêo ou uma dúvida. Revisar o bloco 7 (alguma açêo 'com aprovaçêo' virou 'pode'?) e o bloco 6 (as condições de parar existem?)."},
+  {"front":"Um programador diz que consegue construir o agente do seu processo em duas semanas, sem a sua especificaçêo, 'só olhando o sistema'. O que ele vai errar, e por quê?","back":"Regra × julgamento, faixas de tolerância, quando parar e chamar, o que é dado sensível para esse processo, e o que ninguém daria a um funcionário novo. Nada disso está no sistema; está em quem conhece o negócio."}
 ]
 </script>
 <!-- COMPLETUDE aula-8 | tipo=PRATICA | steps=5
@@ -2006,10 +2006,10 @@ Comece narrando o passo 1 do coordenador.</pre></div>
   [OK] pgoal-tempo        .pgoal com tempo declarado (~15 min) (1)
   [OK] recap-autor        .recap-autor no fecho (1)
   [OK] next-action        .next-action no fecho (1)
-  [OK] cards              <script id="cards-8"> presente (3 cartões de aplicação integradores; decisão registrada acima)
-  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operação)
-  [N/A] teste-se-FUND     aula é PRÁTICA/INTEGRAÇÃO (obrigação não se aplica); sem teste-se opcional
-  dosagem: pool = qsteps (step 04) + mini-caso integrador (prosa, step 01: Fernanda da aula 1 à 8) obrigatórios + qapply opcional (step 02, 4 profissões) = 3 (teto 5). densidade: 2 quadros funcionais em 5 steps, não adjacentes. data-versao no step 05 (ferramenta). rampa de acesso antes da simulação ("ensaio geral de teatro").
+  [OK] cards              <script id="cards-8"> presente (3 cartões de aplicaçêo integradores; decisêo registrada acima)
+  [OK] anti-duplicacao    §11.3 — 3 testes passam (substring / forma / operaçêo)
+  [N/A] teste-se-FUND     aula é PRÁTICA/INTEGRAÇêO (obrigaçêo nêo se aplica); sem teste-se opcional
+  dosagem: pool = qsteps (step 04) + mini-caso integrador (prosa, step 01: Fernanda da aula 1 à 8) obrigatórios + qapply opcional (step 02, 4 profissões) = 3 (teto 5). densidade: 2 quadros funcionais em 5 steps, nêo adjacentes. data-versao no step 05 (ferramenta). rampa de acesso antes da simulaçêo ("ensaio geral de teatro").
 -->
 </section>
 <script src="../assets/curso.js"></script>
