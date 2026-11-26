@@ -6,14 +6,14 @@
 </div>
 
 
-Curso INEMA.CLUB PRO (formato v5) sobre redesenhar processos para humanos dirigirem e agentes de IA executarem.
+Curso ARCKHÉ AI PRO (formato v5) sobre redesenhar processos para humanos dirigirem e agentes de IA executarem.
 
 - `landing.html` ê¢â¬â pêÂ¡gina de entrada
 - `curso.html` ê¢â¬â trilha êÂºnica, 8 aulas (pêÂ¡gina êÂºnica, roteamento por hash)
 - `assets/` ê¢â¬â motor `curso.js` + `aula.css` (formato-curso-v5)
 - `capa/capa.png` ê¢â¬â capa oficial 1280êâ720
 
-Publicado em https://inematds.github.io/pffia/
+Publicado em https://linnoff88-dev.github.io/arckhe-/
 
 ---
 
